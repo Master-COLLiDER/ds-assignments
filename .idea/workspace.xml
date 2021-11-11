@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="assignments" targetName="assignments" />
+    </generated>
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b01afbd1-8ce5-4a01-8f0f-e1fa59572e9c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="20l82omtbkIShAx6jnuyCT6EJfx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
@@ -21,5 +58,66 @@
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b01afbd1-8ce5-4a01-8f0f-e1fa59572e9c" name="Default Changelist" comment="" />
+      <created>1636607608953</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636607608953</updated>
+      <workItem from="1636607612123" duration="766000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1636607696119</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1636607696119</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="400" y="0" key="CommitChangelistDialog2" timestamp="1636607695565">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="400" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1636607695565" />
+    <state x="721" y="315" key="Github.ShareDialog" timestamp="1636607647886">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="721" y="315" key="Github.ShareDialog/0.0.1536.834@0.0.1536.834" timestamp="1636607647886" />
+    <state x="644" y="67" key="Github.UntrackedFilesDialog" timestamp="1636607654009">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="644" y="67" key="Github.UntrackedFilesDialog/0.0.1536.834@0.0.1536.834" timestamp="1636607654009" />
+    <state width="1012" height="142" key="GridCell.Tab.0.bottom" timestamp="1636607671767">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1012" height="142" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1636607671767" />
+    <state width="1012" height="142" key="GridCell.Tab.0.center" timestamp="1636607671767">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1012" height="142" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1636607671767" />
+    <state width="1012" height="142" key="GridCell.Tab.0.left" timestamp="1636607671767">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1012" height="142" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1636607671767" />
+    <state width="1012" height="142" key="GridCell.Tab.0.right" timestamp="1636607671767">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1012" height="142" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1636607671767" />
+    <state x="379" y="111" key="Vcs.Push.Dialog.v2" timestamp="1636607699231">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="379" y="111" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1636607699231" />
   </component>
 </project>
