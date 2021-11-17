@@ -1,20 +1,24 @@
 #ifndef ASSIGNMENTS_QUEUE_H
 #define ASSIGNMENTS_QUEUE_H
 
-struct Node{
+struct Node {
     int info;
-    Node* next;
+    Node *next;
 };
 
 class Queue {
-    Node * front, * rear;
+    Node *front, *rear;
 public:
     Queue();
 
-     ~Queue();
+    ~Queue();
+
     int enqueue(int);
+
     int dequeue();
+
     void display();
+
     bool isEmpty();
 };
 
