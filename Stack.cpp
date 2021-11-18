@@ -8,7 +8,7 @@ Stack::Stack() {
 Stack::~Stack() {
     Node* temp;
     temp = top;
-    while (top != NULL)
+    while (top != nullptr)
     {
         top= top->next;
         delete temp;
