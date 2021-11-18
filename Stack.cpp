@@ -6,6 +6,14 @@ Stack::Stack() {
 }
 
 Stack::~Stack() {
+    Node* temp;
+    temp = top;
+    while (top != NULL)
+    {
+        top= top->next;
+        delete temp;
+        temp = top;
+    }
 }
 
 bool Stack::push(int data) {
