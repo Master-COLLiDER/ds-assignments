@@ -13,7 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b58ac262-0564-4270-963a-4d8fa7938dc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +65,16 @@
       <workItem from="1638180492998" duration="241000" />
       <workItem from="1638180779689" duration="17000" />
       <workItem from="1638180941118" duration="42000" />
-      <workItem from="1638180995756" duration="4050000" />
+      <workItem from="1638180995756" duration="5217000" />
     </task>
+    <task id="LOCAL-00001" summary="oaehgoaiegh">
+      <created>1638185302856</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638185302856</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,7 +83,15 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="oaehgoaiegh" />
+    <option name="LAST_COMMIT_MESSAGE" value="oaehgoaiegh" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="564" y="0" key="CommitChangelistDialog2" timestamp="1638185301997">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="564" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1638185301997" />
     <state width="1261" height="184" key="GridCell.Tab.0.bottom" timestamp="1638166488289">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -93,9 +108,17 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1261" height="184" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1638166488289" />
-    <state x="165" y="0" key="SettingsEditor" timestamp="1638180981022">
+    <state x="165" y="0" key="SettingsEditor" timestamp="1638185386175">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="165" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1638180981022" />
+    <state x="165" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1638185386175" />
+    <state x="522" y="84" key="Vcs.Push.Dialog.v2" timestamp="1638185305272">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="522" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1638185305272" />
+    <state x="731" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1638185425093">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="731" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1638185425093" />
   </component>
 </project>
