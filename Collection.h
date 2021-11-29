@@ -15,6 +15,8 @@ public:
 
     ~Collection();
 
+    int getMax() const;
+
     bool isEmpty();
 
     int insert_pos(CURRENT_TYPE what, int position);

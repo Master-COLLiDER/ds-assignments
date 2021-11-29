@@ -26,7 +26,7 @@ Collection::Collection(int n) {
 }
 
 Collection::~Collection() {
-    delete data;
+    free(data);
 }
 
 bool Collection::isEmpty() {
@@ -46,7 +46,6 @@ int Collection::insert_pos(CURRENT_TYPE what, int pos) {
             data[i] = data[i - 1];
         data[pos - 1] = what;
     }
-
     count++;
     return 1;
 }
@@ -124,17 +123,26 @@ void Collection::bubbleSort() {
             }
         }
     }
-    St_perf: printf("Runtime of St_Comp, and St_Asn(_1, _2, _3) together: %d",runtime);
+    std::cout<<"Data sorted!\n";
+    St_perf: std::cout<<"Runtime of St_Comp, and St_Asn(_1, _2, _3) together: "<<runtime;
 
 }
 
 void Collection::displayData() {
 
-    std::cout<<"\nData : ";
-    for (int i = 0; i < count; i++) {
-        std::cout << data[i] << (((i + 1) != count) ? ", " : "");
-
+    if(count){
+        std::cout<<"Data : ";
+        for (int i = 0; i < count; i++) {
+            std::cout << data[i] << (((i + 1) != count) ? ", " : "");
+        }
+    } else{
+        std::cout<<"Empty!";
     }
+
+}
+
+int Collection::getMax() const {
+    return MAX;
 }
 
 
