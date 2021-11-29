@@ -11,8 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58ac262-0564-4270-963a-4d8fa7938dc6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b58ac262-0564-4270-963a-4d8fa7938dc6" name="Default Changelist" comment="eihgg">
       <change beforePath="$PROJECT_DIR$/Collection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Collection.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +127,8 @@
     <MESSAGE value="indexof search method implimented" />
     <MESSAGE value="delete implimented" />
     <MESSAGE value="bubble sort" />
-    <option name="LAST_COMMIT_MESSAGE" value="bubble sort" />
+    <MESSAGE value="oghiag" />
+    <option name="LAST_COMMIT_MESSAGE" value="oghiag" />
   </component>
   <component name="WindowStateProjectService">
     <state x="876" y="63" key="#com.intellij.ide.util.MemberChooser" timestamp="1638187144308">

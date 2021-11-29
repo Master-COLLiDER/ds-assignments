@@ -130,8 +130,6 @@ void Collection::bubbleSort() {
 
 
 std::ostream &operator<<(std::ostream &os, const Collection &collection) {
-    os << "\nMAX: " << collection.MAX;
-    os << "\tCount: " << collection.count;
     os << "\nData: ";
     for (int i = 0; i < collection.count; i++) {
         os << collection.data[i] << (((i + 1) != collection.count) ? ", " : "");
