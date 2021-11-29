@@ -3,4 +3,4 @@ project(assignments)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(assignments main.cpp)
+add_executable(assignments main.cpp Collection.cpp Collection.h)
