@@ -1,5 +1,5 @@
 
-#include <cstdlib>
+#include <iostream>
 #include "Collection.h"
 
 Collection::Collection() {
@@ -128,15 +128,14 @@ void Collection::bubbleSort() {
 
 }
 
+void Collection::displayData() {
 
-std::ostream &operator<<(std::ostream &os, const Collection &collection) {
-    os << "\nData: ";
-    for (int i = 0; i < collection.count; i++) {
-        os << collection.data[i] << (((i + 1) != collection.count) ? ", " : "");
+    std::cout<<"\nData : ";
+    for (int i = 0; i < count; i++) {
+        std::cout << data[i] << (((i + 1) != count) ? ", " : "");
+
     }
-    return os;
 }
-
 
 
 

@@ -15,13 +15,15 @@ int main() {
     collection.insert_beginning(33);
     collection.insert_beginning(33);
     collection.insert_before(55, 33);
-    std::cout << collection << std::endl;
+    collection.displayData();
+    std::cout << std::endl;
 
 
     collection.bubbleSort();
 
-//    collection.delete_data(526.1);
-    std::cout << collection << std::endl;
+    collection.displayData();
+    std::cout<<std::endl;
+
     return 0;
 
 }

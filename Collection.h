@@ -1,7 +1,6 @@
 #ifndef COLLECTION_H
 #define COLLECTION_H
 
-#include <ostream>
 
 #define CURRENT_TYPE float
 
@@ -40,7 +39,8 @@ public:
 
     void bubbleSort();
 
-    friend std::ostream &operator<<(std::ostream &os, const Collection &collection);
+    void displayData();
+
 };
 
 
