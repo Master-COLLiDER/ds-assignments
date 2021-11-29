@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="assignments" targetName="assignments" />
+    </generated>
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b58ac262-0564-4270-963a-4d8fa7938dc6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="21a5cBctBafownIIWAvnsj2ekhr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="assignments" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="assignments" TARGET_NAME="assignments" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="assignments" RUN_TARGET_NAME="assignments">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -21,5 +50,52 @@
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b58ac262-0564-4270-963a-4d8fa7938dc6" name="Default Changelist" comment="" />
+      <created>1638168394890</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638168394890</updated>
+      <workItem from="1638168396815" duration="396000" />
+      <workItem from="1638168811673" duration="1341000" />
+      <workItem from="1638170164487" duration="252000" />
+      <workItem from="1638170426883" duration="37000" />
+      <workItem from="1638180492998" duration="241000" />
+      <workItem from="1638180779689" duration="17000" />
+      <workItem from="1638180941118" duration="42000" />
+      <workItem from="1638180995756" duration="4050000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1261" height="184" key="GridCell.Tab.0.bottom" timestamp="1638166488289">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1261" height="184" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1638166488289" />
+    <state width="1261" height="184" key="GridCell.Tab.0.center" timestamp="1638166488289">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1261" height="184" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1638166488289" />
+    <state width="1261" height="184" key="GridCell.Tab.0.left" timestamp="1638166488288">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1261" height="184" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1638166488288" />
+    <state width="1261" height="184" key="GridCell.Tab.0.right" timestamp="1638166488289">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1261" height="184" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1638166488289" />
+    <state x="165" y="0" key="SettingsEditor" timestamp="1638180981022">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="165" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1638180981022" />
   </component>
 </project>
