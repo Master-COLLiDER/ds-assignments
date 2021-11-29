@@ -38,6 +38,8 @@ public:
 
     CURRENT_TYPE delete_data(CURRENT_TYPE which);
 
+    int indexOf(CURRENT_TYPE which);
+
     friend std::ostream &operator<<(std::ostream &os, const Collection &collection);
 };
 
