@@ -111,22 +111,20 @@ int Collection::indexOf(float which) {
 
 
 void Collection::bubbleSort() {
+    int runtime=0;
     int i, j;
     float temp;
     for (i = count - 1; i > 0; i--) {
         for (j = 0; j < i; j++) {
-            St_Comp:
-            if (data[j] > data[j + 1]) {
-                St_Asn_1:
-                temp = data[j];
-                St_Asn_2:
-                data[j] = data[j + 1];  //St_Asn_2
-                St_Asn_3:
-                data[j + 1] = temp;  //St_Asn_3
+
+    St_Comp:  if (data[j] > data[j + 1]) {              runtime++;
+    St_Asn_1:   temp = data[j];             runtime++;
+    St_Asn_2:   data[j] = data[j + 1];      runtime++;//St_Asn_2
+    St_Asn_3:   data[j + 1] = temp;         runtime++;//St_Asn_3
             }
         }
     }
-//    St_perf:
+    St_perf: printf("Runtime of St_Comp, and St_Asn(_1, _2, _3) together: %d",runtime);
 
 }
 
