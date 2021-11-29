@@ -6,7 +6,6 @@
 #define CURRENT_TYPE float
 
 
-
 class Collection {
     int MAX, count;
     CURRENT_TYPE *data;
@@ -19,8 +18,7 @@ public:
 
     bool isEmpty();
 
-    //The Other Member Function:
-    int insert_pos(CURRENT_TYPE what,int position);
+    int insert_pos(CURRENT_TYPE what, int position);
 
     int insert_beginning(CURRENT_TYPE what);
 
@@ -39,6 +37,8 @@ public:
     CURRENT_TYPE delete_data(CURRENT_TYPE which);
 
     int indexOf(CURRENT_TYPE which);
+
+    void bubbleSort();
 
     friend std::ostream &operator<<(std::ostream &os, const Collection &collection);
 };

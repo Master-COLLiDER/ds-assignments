@@ -18,7 +18,9 @@ int main() {
     std::cout << collection << std::endl;
 
 
-    collection.delete_data(526.1);
+    collection.bubbleSort();
+
+//    collection.delete_data(526.1);
     std::cout << collection << std::endl;
     return 0;
 

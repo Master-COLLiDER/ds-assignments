@@ -14,6 +14,7 @@
     <list default="true" id="b58ac262-0564-4270-963a-4d8fa7938dc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Collection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Collection.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Collection.h" beforeDir="false" afterPath="$PROJECT_DIR$/Collection.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,11 +52,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -72,7 +68,8 @@
       <workItem from="1638180492998" duration="241000" />
       <workItem from="1638180779689" duration="17000" />
       <workItem from="1638180941118" duration="42000" />
-      <workItem from="1638180995756" duration="12719000" />
+      <workItem from="1638180995756" duration="13829000" />
+      <workItem from="1638195296322" duration="581000" />
     </task>
     <task id="LOCAL-00001" summary="oaehgoaiegh">
       <created>1638185302856</created>
@@ -102,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638191445719</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="delete implimented">
+      <created>1638194169938</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1638194169938</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,53 +120,58 @@
     <MESSAGE value="ogahg" />
     <MESSAGE value="oihgew" />
     <MESSAGE value="indexof search method implimented" />
-    <option name="LAST_COMMIT_MESSAGE" value="indexof search method implimented" />
+    <MESSAGE value="delete implimented" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete implimented" />
   </component>
   <component name="WindowStateProjectService">
     <state x="876" y="63" key="#com.intellij.ide.util.MemberChooser" timestamp="1638187144308">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="876" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1638187144308" />
-    <state x="564" y="0" key="CommitChangelistDialog2" timestamp="1638191445279">
+    <state x="564" y="0" key="CommitChangelistDialog2" timestamp="1638194169221">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="564" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1638191445279" />
-    <state width="1481" height="197" key="GridCell.Tab.0.bottom" timestamp="1638194155912">
+    <state x="564" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1638194169221" />
+    <state width="1481" height="197" key="GridCell.Tab.0.bottom" timestamp="1638195888285">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="197" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1638194155912" />
-    <state width="1481" height="197" key="GridCell.Tab.0.center" timestamp="1638194155912">
+    <state width="1481" height="197" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1638195888285" />
+    <state width="1481" height="197" key="GridCell.Tab.0.center" timestamp="1638195888285">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="197" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1638194155912" />
-    <state width="1481" height="197" key="GridCell.Tab.0.left" timestamp="1638194155912">
+    <state width="1481" height="197" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1638195888285" />
+    <state width="1481" height="197" key="GridCell.Tab.0.left" timestamp="1638195888285">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="197" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1638194155912" />
-    <state width="1481" height="197" key="GridCell.Tab.0.right" timestamp="1638194155912">
+    <state width="1481" height="197" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1638195888285" />
+    <state width="1481" height="197" key="GridCell.Tab.0.right" timestamp="1638195888285">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="197" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1638194155912" />
+    <state width="1481" height="197" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1638195888285" />
     <state x="897" y="46" key="RollbackChangesDialog" timestamp="1638187053164">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="897" y="46" key="RollbackChangesDialog/0.0.1536.834@0.0.1536.834" timestamp="1638187053164" />
-    <state x="165" y="0" key="SettingsEditor" timestamp="1638185386175">
+    <state x="92" y="0" key="SettingsEditor" timestamp="1638195887172">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="165" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1638185386175" />
+    <state x="92" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1638195887172" />
     <state x="989" y="308" key="VCS.ChangelistChooser" timestamp="1638187056135">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="989" y="308" key="VCS.ChangelistChooser/0.0.1536.834@0.0.1536.834" timestamp="1638187056135" />
-    <state x="522" y="84" key="Vcs.Push.Dialog.v2" timestamp="1638191447543">
+    <state x="522" y="84" key="Vcs.Push.Dialog.v2" timestamp="1638194171736">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="522" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1638191447543" />
+    <state x="522" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1638194171736" />
     <state x="681" y="25" width="855" height="740" key="find.popup" timestamp="1638192659155">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="681" y="25" width="855" height="740" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1638192659155" />
+    <state x="542" y="162" key="refactoring.ChangeSignatureDialog" timestamp="1638195008532">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="542" y="162" key="refactoring.ChangeSignatureDialog/0.0.1536.834@0.0.1536.834" timestamp="1638195008532" />
     <state x="694" y="0" width="840" height="1034" key="search.everywhere.popup" timestamp="1638190269250">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

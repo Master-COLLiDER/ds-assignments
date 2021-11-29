@@ -34,6 +34,7 @@ bool Collection::isEmpty() {
 }
 
 int Collection::insert_pos(CURRENT_TYPE what, int pos) {
+    int i;
     if (count == MAX)
         return 0;
     if ((pos < 1) || (pos > count + 1))
@@ -41,7 +42,7 @@ int Collection::insert_pos(CURRENT_TYPE what, int pos) {
     if (pos - 1 == count)
         data[count] = what;
     else {
-        for (int i = count; i >= pos; i--)
+        for (i = count; i >= pos; i--)
             data[i] = data[i - 1];
         data[pos - 1] = what;
     }
@@ -68,7 +69,7 @@ int Collection::insert_before(float what, float before_which) {
 
 
 CURRENT_TYPE Collection::delete_pos(int pos) {
-
+    int i;
     float temp;
     if (count < 1)
         return NULL;
@@ -80,7 +81,7 @@ CURRENT_TYPE Collection::delete_pos(int pos) {
     if (pos == count)
         count--;
     else {
-        for (int i = pos - 1; i < count - 1; i++)
+        for (i = pos - 1; i < count - 1; i++)
             data[i] = data[i + 1];
         count--;
     }
@@ -92,7 +93,7 @@ CURRENT_TYPE Collection::delete_beginning() {
 }
 
 CURRENT_TYPE Collection::delete_end() {
-    return delete_pos(count-1);
+    return delete_pos(count - 1);
 }
 
 CURRENT_TYPE Collection::delete_data(float which) {
@@ -109,15 +110,38 @@ int Collection::indexOf(float which) {
 }
 
 
+void Collection::bubbleSort() {
+    int i, j;
+    float temp;
+    for (i = count - 1; i > 0; i--) {
+        for (j = 0; j < i; j++) {
+            St_Comp:
+            if (data[j] > data[j + 1]) {
+                St_Asn_1:
+                temp = data[j];
+                St_Asn_2:
+                data[j] = data[j + 1];  //St_Asn_2
+                St_Asn_3:
+                data[j + 1] = temp;  //St_Asn_3
+            }
+        }
+    }
+//    St_perf:
+
+}
+
+
 std::ostream &operator<<(std::ostream &os, const Collection &collection) {
     os << "\nMAX: " << collection.MAX;
-    os << "\nCount: " << collection.count;
+    os << "\tCount: " << collection.count;
     os << "\nData: ";
     for (int i = 0; i < collection.count; i++) {
-        os << collection.data[i] << ", ";
+        os << collection.data[i] << (((i + 1) != collection.count) ? ", " : "");
     }
     return os;
 }
+
+
 
 
 
