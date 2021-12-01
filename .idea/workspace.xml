@@ -11,7 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58ac262-0564-4270-963a-4d8fa7938dc6" name="Default Changelist" comment="oahgoga">
+    <list default="true" id="b58ac262-0564-4270-963a-4d8fa7938dc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Collection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Collection.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Collection.h" beforeDir="false" afterPath="$PROJECT_DIR$/Collection.h" afterDir="false" />
@@ -27,6 +27,11 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="collection" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="21a5cBctBafownIIWAvnsj2ekhr" />
@@ -52,11 +57,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -75,7 +75,9 @@
       <workItem from="1638180941118" duration="42000" />
       <workItem from="1638180995756" duration="13829000" />
       <workItem from="1638195296322" duration="581000" />
-      <workItem from="1638195900629" duration="4591000" />
+      <workItem from="1638195900629" duration="5060000" />
+      <workItem from="1638255228083" duration="896000" />
+      <workItem from="1638336205252" duration="412000" />
     </task>
     <task id="LOCAL-00001" summary="oaehgoaiegh">
       <created>1638185302856</created>
@@ -140,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638198127404</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="oaiwhgoaihg">
+      <created>1638200799937</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1638200799937</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,33 +168,34 @@
     <MESSAGE value="oghiag" />
     <MESSAGE value="gioeahg" />
     <MESSAGE value="oahgoga" />
-    <option name="LAST_COMMIT_MESSAGE" value="oahgoga" />
+    <MESSAGE value="oaiwhgoaihg" />
+    <option name="LAST_COMMIT_MESSAGE" value="oaiwhgoaihg" />
   </component>
   <component name="WindowStateProjectService">
     <state x="876" y="63" key="#com.intellij.ide.util.MemberChooser" timestamp="1638198852029">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="876" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1638198852029" />
-    <state x="564" y="0" key="CommitChangelistDialog2" timestamp="1638198131145">
+    <state x="564" y="0" key="CommitChangelistDialog2" timestamp="1638200799484">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="564" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1638198131145" />
-    <state width="1481" height="436" key="GridCell.Tab.0.bottom" timestamp="1638200501971">
+    <state x="564" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1638200799484" />
+    <state width="1481" height="436" key="GridCell.Tab.0.bottom" timestamp="1638256124345">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="436" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1638200501971" />
-    <state width="1481" height="436" key="GridCell.Tab.0.center" timestamp="1638200501969">
+    <state width="1481" height="436" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1638256124345" />
+    <state width="1481" height="436" key="GridCell.Tab.0.center" timestamp="1638256124345">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="436" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1638200501969" />
-    <state width="1481" height="436" key="GridCell.Tab.0.left" timestamp="1638200501968">
+    <state width="1481" height="436" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1638256124345" />
+    <state width="1481" height="436" key="GridCell.Tab.0.left" timestamp="1638256124345">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="436" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1638200501968" />
-    <state width="1481" height="436" key="GridCell.Tab.0.right" timestamp="1638200501970">
+    <state width="1481" height="436" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1638256124345" />
+    <state width="1481" height="436" key="GridCell.Tab.0.right" timestamp="1638256124345">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="436" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1638200501970" />
+    <state width="1481" height="436" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1638256124345" />
     <state x="897" y="46" key="RollbackChangesDialog" timestamp="1638198161118">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -198,10 +208,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="989" y="308" key="VCS.ChangelistChooser/0.0.1536.834@0.0.1536.834" timestamp="1638187056135" />
-    <state x="522" y="84" key="Vcs.Push.Dialog.v2" timestamp="1638196848439">
+    <state x="522" y="84" key="Vcs.Push.Dialog.v2" timestamp="1638200802671">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="522" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1638196848439" />
+    <state x="522" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1638200802671" />
     <state x="681" y="25" width="855" height="740" key="find.popup" timestamp="1638192659155">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
