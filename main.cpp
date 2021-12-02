@@ -1,10 +1,17 @@
 #include <iostream>
 #include "Collection.h"
 
-void printMenu();
+///void printMenu();
 
 
-int main() {
+int main(){
+    std::cout<<"Hello World!";
+    return 0;
+}
+
+
+
+/**int main() {
 
     int n, choice = 0, pos;
     CURRENT_TYPE data;
@@ -63,4 +70,4 @@ void printMenu() {
     std::cout << "4. Delete\n";
     std::cout << "5. Exit\n";
     std::cout << "Enter your Choice: ";
-}
+}**/
