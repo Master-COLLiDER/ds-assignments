@@ -5,6 +5,7 @@
 class OrderedPair {
     int x, y;
 public:
+    OrderedPair();
     OrderedPair(int x, int y);
 
     OrderedPair(const OrderedPair &orderedPair);

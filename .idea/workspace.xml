@@ -20,7 +20,7 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:ordered_pair" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:stack_with_ordered_pair" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
@@ -36,15 +36,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47aa6809-fd54-4b75-9475-a13098274740" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Stack.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stack.h" beforeDir="false" afterPath="$PROJECT_DIR$/Stack.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderedPair.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/OrderedPair.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderedPair.h" beforeDir="false" afterPath="$PROJECT_DIR$/OrderedPair.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-    </list>
-    <list id="e47b7ddc-3167-4e25-8459-d646032d0a4a" name="clipboardPatchFile" comment="ordered_pair_copy">
-      <change afterPath="$PROJECT_DIR$/OrderedPair.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderedPair.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +68,7 @@
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="vcs.patch.to.clipboard" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
@@ -123,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637254626642</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ordered_pair_copy">
+      <created>1638469222423</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1638469222423</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +142,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="ordered_pair" />
+                        <option value="stack_with_ordered_pair" />
                       </list>
                     </value>
                   </entry>
@@ -157,17 +159,18 @@
     <MESSAGE value="gaeohoeagh" />
     <MESSAGE value="geaohge" />
     <MESSAGE value="gheoahge" />
-    <option name="LAST_COMMIT_MESSAGE" value="gheoahge" />
+    <MESSAGE value="ordered_pair_copy" />
+    <option name="LAST_COMMIT_MESSAGE" value="ordered_pair_copy" />
   </component>
   <component name="WindowStateProjectService">
     <state x="493" y="63" key="#com.intellij.ide.util.MemberChooser" timestamp="1638462783478">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="493" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1638462783478" />
-    <state x="282" y="0" key="CommitChangelistDialog2" timestamp="1637254626040">
+    <state x="282" y="0" key="CommitChangelistDialog2" timestamp="1638469221936">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="282" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1637254626040" />
+    <state x="282" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1638469221936" />
     <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1638463467992">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -192,9 +195,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="261" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1637254385120" />
-    <state x="81" y="107" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1638462488344">
+    <state x="81" y="107" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1638469119706">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="81" y="107" key="vcs.ApplyPatchDifferentiatedDialog/0.0.1536.834@0.0.1536.834" timestamp="1638462488344" />
+    <state x="81" y="107" key="vcs.ApplyPatchDifferentiatedDialog/0.0.1536.834@0.0.1536.834" timestamp="1638469119706" />
   </component>
 </project>

@@ -40,4 +40,10 @@ void OrderedPair::show() {
     printf("(%d, %d)", x, y);
 }
 
+OrderedPair::OrderedPair() {
+    this->x=0;
+    this->y=0;
+
+}
+
 
