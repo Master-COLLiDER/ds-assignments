@@ -1,8 +1,9 @@
 #ifndef COLLECTION_H
 #define COLLECTION_H
 
+#include "OrderedPair.h"
 
-#define CURRENT_TYPE float
+#define CURRENT_TYPE OrderedPair
 
 
 class Collection {
@@ -19,15 +20,15 @@ public:
 
     bool isEmpty();
 
-    int insert_pos(CURRENT_TYPE what, int position);
+    int insert_pos(const CURRENT_TYPE &what, int position);
 
-    int insert_beginning(CURRENT_TYPE what);
+    int insert_beginning(const CURRENT_TYPE &what);
 
-    int insert_end(CURRENT_TYPE what);
+    int insert_end(const CURRENT_TYPE &what);
 
-    int insert_after(CURRENT_TYPE what, CURRENT_TYPE after_which);
+    int insert_after(const CURRENT_TYPE &what, const CURRENT_TYPE &after_which);
 
-    int insert_before(CURRENT_TYPE what, CURRENT_TYPE before_which);
+    int insert_before(const CURRENT_TYPE &what, const CURRENT_TYPE &before_which);
 
     CURRENT_TYPE delete_beginning();
 
@@ -35,9 +36,9 @@ public:
 
     CURRENT_TYPE delete_pos(int position);
 
-    CURRENT_TYPE delete_data(CURRENT_TYPE which);
+    CURRENT_TYPE delete_data(const CURRENT_TYPE &which);
 
-    int indexOf(CURRENT_TYPE which);
+    int indexOf(const CURRENT_TYPE &which);
 
     void bubbleSort();
 

@@ -1,19 +1,12 @@
 #include <iostream>
 #include "Collection.h"
 
-///void printMenu();
+void printMenu();
 
 
-int main(){
-    std::cout<<"Hello World!";
-    return 0;
-}
+int main() {
 
-
-
-/**int main() {
-
-    int n, choice = 0, pos;
+    int n, choice = 0, pos,x,y;
     CURRENT_TYPE data;
 
     std::cout << "Enter the Collection size: ";
@@ -28,15 +21,22 @@ int main(){
 
         switch (choice) {
             case 1:
-                std::cout << "Enter the value to insert: ";
-                std::cin >> data;
-                std::cout << "In which position: ";
-                std::cin >> pos;
-                if (collection.insert_pos(data, pos)) {
-                    std::cout << "Successfully Inserted " << data << " in " << pos << "-th position.";
-                } else {
-                    std::cout << "Failed to insert " << data << " in " << pos << "-th position";
-                }
+//                std::cout << "Enter the value (x,y) to insert: ";
+//                std::cin >> x>>y;
+//                data = OrderedPair(x,y);
+//                std::cout << "In which position: ";
+//                std::cin >> pos;
+//                if (collection.insert_pos(data, pos)) {
+//                    std::cout << "Successfully Inserted "; data.show();std::cout << " in " << pos << "-th position.";
+//                } else {
+//                    std::cout << "Failed to insert "; data.show();std::cout << pos << "-th position";
+//                }
+
+                collection.insert_beginning(OrderedPair(85,64));
+                collection.insert_beginning(OrderedPair(637,34));
+                collection.insert_beginning(OrderedPair(1245,21));
+                collection.insert_beginning(OrderedPair(43,566));
+                collection.insert_beginning(OrderedPair(345,11));
                 break;
             case 2:
                 collection.displayData();
@@ -47,7 +47,7 @@ int main(){
             case 4:
                 std::cout << "Enter the position for the value to delete: ";
                 std::cin >> pos;
-                std::cout << "Deleted " << collection.delete_pos(pos) << " in " << pos << "-th position.";
+                std::cout << "Deleted "; collection.delete_pos(pos);std::cout << " in " << pos << "-th position.";
 
                 break;
             case 5:
@@ -70,4 +70,4 @@ void printMenu() {
     std::cout << "4. Delete\n";
     std::cout << "5. Exit\n";
     std::cout << "Enter your Choice: ";
-}**/
+}
