@@ -3,11 +3,11 @@
 
 int main() {
     Stack stack = Stack();
-    int ch;
-    int data;
+    int ch,x,y;
+    OrderedPair data;
     do {
         std::cout << "\nStack Program Menu\n";
-        std::cout << "1.Push an Element.\n";
+        std::cout << "1.Push an (x,y) Pair.\n";
         std::cout << "2.Pop an Element.\n";
         std::cout << "3.Display Stack.\n";
         std::cout << "4.Check isEmpty\n";
@@ -17,21 +17,19 @@ int main() {
 
         switch (ch) {
             case 1:
-                std::cout << "Enter an element to Push: ";
-                std::cin >> data;
+                std::cout << "Enter an (x,y) to Push: ";
+                std::cin >>x>>y;
+                data = OrderedPair(x,y);
                 if (stack.push(data)) {
-                    std::cout << "Successfully pushed " << data << std::endl;
+                    std::cout << "Successfully pushed "; data.show();std::cout<< std::endl;
                 } else {
                     std::cout << "Operation Failed!" << std::endl;
                 }
                 break;
             case 2:
                 data = stack.pop();
-                if (data) {
-                    std::cout << "Element popped : " << data << std::endl;
-                } else {
-                    std::cout << "Operation Failed!" << std::endl;
-                }
+                std::cout << "Element popped : "; data.show(); std::cout<< std::endl;
+
                 break;
             case 3:
                 std::cout << "Elements in the Stack are: ";

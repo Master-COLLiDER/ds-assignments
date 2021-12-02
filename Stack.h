@@ -1,5 +1,10 @@
+#ifndef ASSIGNMENTS_STACK_H
+#define ASSIGNMENTS_STACK_H
+
+#include "OrderedPair.h"
+
 struct Node {
-    int data;
+    OrderedPair data;
     Node *next;
 };
 
@@ -10,12 +15,14 @@ public:
 
     ~Stack();
 
-    bool push(int);
+    bool push(const OrderedPair &data);
 
-    int pop();
+    OrderedPair pop();
 
     bool isEmpty();
 
     void display();
 
 };
+
+#endif

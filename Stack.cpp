@@ -16,9 +16,9 @@ Stack::~Stack() {
     }
 }
 
-bool Stack::push(int data) {
+bool Stack::push(const OrderedPair &data) {
     Node *temp;
-    temp = new Node();
+    temp = new Node;
     if (!temp) {
         std::cout << "\nStack Overflow" << std::endl;
         return false;
@@ -29,18 +29,18 @@ bool Stack::push(int data) {
     return true;
 }
 
-int Stack::pop() {
+OrderedPair Stack::pop() {
     Node *temp;
 
     if (top == nullptr) {
         std::cout << "\nStack Underflow" << std::endl;
-        return 0;
+        exit(0);
     }
 
     temp = top;
     top = top->next;
-//    temp->next = nullptr;
-    int data = temp->data;
+    temp->next = nullptr;
+    OrderedPair data = temp->data;
     delete temp;
     return data;
 }
@@ -56,8 +56,10 @@ void Stack::display() {
     } else {
         temp = top;
         while (temp != nullptr) {
-            std::cout << " ->" << temp->data;
+            temp->data.show();
             temp = temp->next;
+            std::cout << " ->";
         }
     }
 }
+
