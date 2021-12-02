@@ -13,8 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b58ac262-0564-4270-963a-4d8fa7938dc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Collection.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collection.h" beforeDir="false" afterPath="$PROJECT_DIR$/Collection.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +75,9 @@
       <workItem from="1638195296322" duration="581000" />
       <workItem from="1638195900629" duration="5060000" />
       <workItem from="1638255228083" duration="896000" />
-      <workItem from="1638336205252" duration="412000" />
+      <workItem from="1638336205252" duration="1567000" />
+      <workItem from="1638419720302" duration="609000" />
+      <workItem from="1638459090490" duration="609000" />
     </task>
     <task id="LOCAL-00001" summary="oaehgoaiegh">
       <created>1638185302856</created>
@@ -149,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638200799937</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="clearing">
+      <created>1638336655741</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1638336655741</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,33 +176,34 @@
     <MESSAGE value="gioeahg" />
     <MESSAGE value="oahgoga" />
     <MESSAGE value="oaiwhgoaihg" />
-    <option name="LAST_COMMIT_MESSAGE" value="oaiwhgoaihg" />
+    <MESSAGE value="clearing" />
+    <option name="LAST_COMMIT_MESSAGE" value="clearing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="876" y="63" key="#com.intellij.ide.util.MemberChooser" timestamp="1638198852029">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="876" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1638198852029" />
-    <state x="564" y="0" key="CommitChangelistDialog2" timestamp="1638200799484">
+    <state x="564" y="0" key="CommitChangelistDialog2" timestamp="1638336655081">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="564" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1638200799484" />
-    <state width="1481" height="436" key="GridCell.Tab.0.bottom" timestamp="1638256124345">
+    <state x="564" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1638336655081" />
+    <state width="1062" height="322" key="GridCell.Tab.0.bottom" timestamp="1638425832291">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="436" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1638256124345" />
-    <state width="1481" height="436" key="GridCell.Tab.0.center" timestamp="1638256124345">
+    <state width="1062" height="322" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1638425832291" />
+    <state width="1062" height="322" key="GridCell.Tab.0.center" timestamp="1638425832291">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="436" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1638256124345" />
-    <state width="1481" height="436" key="GridCell.Tab.0.left" timestamp="1638256124345">
+    <state width="1062" height="322" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1638425832291" />
+    <state width="1062" height="322" key="GridCell.Tab.0.left" timestamp="1638425832290">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="436" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1638256124345" />
-    <state width="1481" height="436" key="GridCell.Tab.0.right" timestamp="1638256124345">
+    <state width="1062" height="322" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1638425832290" />
+    <state width="1062" height="322" key="GridCell.Tab.0.right" timestamp="1638425832291">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="436" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1638256124345" />
+    <state width="1062" height="322" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1638425832291" />
     <state x="897" y="46" key="RollbackChangesDialog" timestamp="1638198161118">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -208,10 +216,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="989" y="308" key="VCS.ChangelistChooser/0.0.1536.834@0.0.1536.834" timestamp="1638187056135" />
-    <state x="522" y="84" key="Vcs.Push.Dialog.v2" timestamp="1638200802671">
+    <state x="522" y="84" key="Vcs.Push.Dialog.v2" timestamp="1638336658036">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="522" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1638200802671" />
+    <state x="522" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1638336658036" />
     <state x="681" y="25" width="855" height="740" key="find.popup" timestamp="1638192659155">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
