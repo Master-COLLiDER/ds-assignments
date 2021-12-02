@@ -5,6 +5,7 @@
 class OrderedPair {
     int x, y;
 public:
+    OrderedPair();
     OrderedPair(int x, int y);
 
     OrderedPair(const OrderedPair &orderedPair);
@@ -17,13 +18,14 @@ public:
 
     void set(int x = 0, int y = 0);
 
-    int getX();
+    int getX() const;
 
-    int getY();
+    int getY() const;
 
-    void show();
+    void show() const;
 
-
+    static float sqRoot(float number);
+    float getLength() const;
 
 };
 
