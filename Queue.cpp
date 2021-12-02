@@ -58,7 +58,7 @@ void Queue::display() {
     Node *temp;
     temp = front;
     printf("\nThe Queue: ");
-    while (temp != NULL) {
+    while (temp != nullptr) {
         temp->info.show();
         printf("-> ");
         temp = temp->next;
