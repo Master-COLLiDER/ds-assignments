@@ -38,7 +38,7 @@ void OrderedPair::set(int x, int y) {
 }
 
 void OrderedPair::show() {
-    printf("(%d, %d)", x, y);
+    printf("(%d,%d)", x, y);
 }
 
 OrderedPair::OrderedPair() {

@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:stack_with_ordered_pair" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="assignments" targetName="assignments" />
@@ -11,7 +35,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5a0b823-6247-47a1-abb6-39327ca42b06" name="Default Changelist" comment="" />
+    <list default="true" id="c5a0b823-6247-47a1-abb6-39327ca42b06" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderedPair.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/OrderedPair.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Queue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +55,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="queue" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,14 +78,14 @@
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="assignments" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="assignments" TARGET_NAME="assignments" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="assignments" RUN_TARGET_NAME="assignments">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="assignments" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="assignments" TARGET_NAME="assignments" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="assignments" RUN_TARGET_NAME="assignments">
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -83,53 +114,86 @@
       <option name="project" value="LOCAL" />
       <updated>1637175224620</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="geagae">
+      <created>1638464349650</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1638464349650</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="stack_with_ordered_pair" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ageuhiaegkuh" />
     <MESSAGE value="oaehg" />
-    <option name="LAST_COMMIT_MESSAGE" value="oaehg" />
+    <MESSAGE value="geagae" />
+    <option name="LAST_COMMIT_MESSAGE" value="geagae" />
   </component>
   <component name="WindowStateProjectService">
     <state x="493" y="63" key="#com.intellij.ide.util.MemberChooser" timestamp="1637169975518">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="493" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1637169975518" />
-    <state x="282" y="0" key="CommitChangelistDialog2" timestamp="1637175224029">
+    <state x="282" y="0" key="CommitChangelistDialog2" timestamp="1638464349165">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="282" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1637175224029" />
+    <state x="282" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1638464349165" />
     <state x="496" y="112" key="FileChooserDialogImpl" timestamp="1637169533852">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="496" y="112" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1637169533852" />
-    <state width="1481" height="198" key="GridCell.Tab.0.bottom" timestamp="1637172303317">
+    <state width="1481" height="434" key="GridCell.Tab.0.bottom" timestamp="1638464997459">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="198" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1637172303317" />
-    <state width="1481" height="198" key="GridCell.Tab.0.center" timestamp="1637172303317">
+    <state width="1481" height="434" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1638464997459" />
+    <state width="1481" height="434" key="GridCell.Tab.0.center" timestamp="1638464997459">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="198" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1637172303317" />
-    <state width="1481" height="198" key="GridCell.Tab.0.left" timestamp="1637172303317">
+    <state width="1481" height="434" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1638464997459" />
+    <state width="1481" height="434" key="GridCell.Tab.0.left" timestamp="1638464997458">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="198" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1637172303317" />
-    <state width="1481" height="198" key="GridCell.Tab.0.right" timestamp="1637172303317">
+    <state width="1481" height="434" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1638464997458" />
+    <state width="1481" height="434" key="GridCell.Tab.0.right" timestamp="1638464997459">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="198" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1637172303317" />
+    <state width="1481" height="434" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1638464997459" />
     <state x="261" y="84" key="Vcs.Push.Dialog.v2" timestamp="1637175229235">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="261" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1637175229235" />
+    <state x="341" y="186" key="run.anything.popup" timestamp="1638464706131">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="341" y="186" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1638464706131" />
     <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1637171911669">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

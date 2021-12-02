@@ -2,7 +2,8 @@
 #include "Queue.h"
 
 int main() {
-    int c, data;
+    int c, x,y;
+    OrderedPair data;
     Queue queue;
     printf("\n--Queue Program Menu--");
     do {
@@ -12,14 +13,16 @@ int main() {
         switch (c) {
             case 1:
                 printf("Enter a data to enqueue: ");
-                std::cin >> data;
+                std::cin >> x>>y;
+                data = OrderedPair(x,y);
                 if (queue.enqueue(data)) {
-                    printf("Successfully enqueued: %d.", data);
+                    printf("Successfully enqueued: (%d, %d).",x,y);
                 } else
                     printf("Operation Failed!");
                 break;
             case 2:
-                printf("Dequeued: %d", queue.dequeue());
+                printf("Dequeued: ");
+                queue.dequeue().show();
                 break;
             case 3:
                 queue.display();

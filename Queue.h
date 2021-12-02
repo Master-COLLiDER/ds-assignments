@@ -1,8 +1,10 @@
 #ifndef ASSIGNMENTS_QUEUE_H
 #define ASSIGNMENTS_QUEUE_H
 
+#include "OrderedPair.h"
+
 struct Node {
-    int info;
+    OrderedPair info;
     Node *next;
 };
 
@@ -13,9 +15,9 @@ public:
 
     ~Queue();
 
-    int enqueue(int);
+    int enqueue(const OrderedPair &what);
 
-    int dequeue();
+    OrderedPair dequeue();
 
     void display();
 
