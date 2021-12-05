@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include "Collection.h"
+#include "Stack.h"
 
 Collection::Collection() {
     MAX = 0;
@@ -170,7 +171,57 @@ void Collection::insertionSort() {
 }
 
 void Collection::quickSort() {
+    Stack whereto;
+    OrderedPair cur_op = OrderedPair(0,count-1); //cur_op is an ordered pair
+    int start,end,Pivot,position,left,right;
+    whereto.push(cur_op);
+    while(!whereto.isEmpty())
+    {
+        cur_op=whereto.pop();
+        start = cur_op.getX();
+        end = cur_op.getY();
+        Pivot= data[start];
+        position=start;
+        left=start+1;
+        right=end;
+        while(left<right)
+        {
+            for( ;right>left; right--) // Ensure that element towards right of Pivot are bigger
+            {
+                if(data[right]<Pivot)
+                {
+                    data[position]=data[right];
+                    data[right]=Pivot;
+                    position=right;
+                    right--;
+                    break;
+                }
+            }
+            for(  ; left < right; left++)   // Ensure that element towards left of Pivot are smaller
+            {
+                if(data[left]>=Pivot)
+                {
+                    data[position]=data[left];
+                    data[left]=Pivot;
+                    position=left;
+                    left++;
+                    break;
+                }
+            }
+        } // End of main loop for Positioning the Pivot element
+        if((position+1)<end)
+        {
+            cur_op=OrderedPair(position+1, end);
+            whereto.push(cur_op);
+        }
+        if(start<(position-1))
+        {
+            cur_op=OrderedPair(start, position-1);
+            whereto.push(cur_op);
+        }
 
+
+    }
 }
 
 void Collection::selectionSort() {

@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:stack_with_ordered_pair" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="assignments" targetName="assignments" />
@@ -11,10 +35,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58ac262-0564-4270-963a-4d8fa7938dc6" name="Default Changelist" comment="oahgoga">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="47aa6809-fd54-4b75-9475-a13098274740" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Collection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Collection.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collection.h" beforeDir="false" afterPath="$PROJECT_DIR$/Collection.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,9 +62,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Healer\Desktop\DS\assignments" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Healer\Desktop\DS\assignments" />
     </key>
@@ -146,13 +173,29 @@
       <option name="project" value="LOCAL" />
       <updated>1638198127404</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="oahgoga">
+      <created>1638717742558</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1638717742558</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
@@ -172,26 +215,26 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="876" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1638198852029" />
-    <state x="564" y="0" key="CommitChangelistDialog2" timestamp="1638198131145">
+    <state x="564" y="0" key="CommitChangelistDialog2" timestamp="1638717742129">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="564" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1638198131145" />
-    <state width="1481" height="260" key="GridCell.Tab.0.bottom" timestamp="1638715598088">
+    <state x="564" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1638717742129" />
+    <state width="1481" height="260" key="GridCell.Tab.0.bottom" timestamp="1638718632575">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="260" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1638715598088" />
-    <state width="1481" height="260" key="GridCell.Tab.0.center" timestamp="1638715598088">
+    <state width="1481" height="260" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1638718632575" />
+    <state width="1481" height="260" key="GridCell.Tab.0.center" timestamp="1638718632575">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="260" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1638715598088" />
-    <state width="1481" height="260" key="GridCell.Tab.0.left" timestamp="1638715598088">
+    <state width="1481" height="260" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1638718632575" />
+    <state width="1481" height="260" key="GridCell.Tab.0.left" timestamp="1638718632575">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="260" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1638715598088" />
-    <state width="1481" height="260" key="GridCell.Tab.0.right" timestamp="1638715598088">
+    <state width="1481" height="260" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1638718632575" />
+    <state width="1481" height="260" key="GridCell.Tab.0.right" timestamp="1638718632575">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="260" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1638715598088" />
+    <state width="1481" height="260" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1638718632575" />
     <state width="1481" height="234" key="GridCell.Tab.1.bottom" timestamp="1638638025210">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
