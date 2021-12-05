@@ -21,21 +21,22 @@ int main() {
 
         switch (choice) {
             case 1:
-                std::cout << "Enter the value to insert: ";
-                std::cin >> data;
-                std::cout << "In which position: ";
-                std::cin >> pos;
-                if (collection.insert_pos(data, pos)) {
-                    std::cout << "Successfully Inserted " << data << " in " << pos << "-th position.";
-                } else {
-                    std::cout << "Failed to insert " << data << " in " << pos << "-th position";
-                }
+//                std::cout << "Enter the value to insert: ";
+//                std::cin >> data;
+//                std::cout << "In which position: ";
+//                std::cin >> pos;
+                collection.insert_pos(20, 1);
+                collection.insert_pos(345, 1);
+                collection.insert_pos(66, 1);
+                collection.insert_pos(76, 1);
+                collection.insert_pos(623, 1);
+                collection.insert_pos(56, 1);
                 break;
             case 2:
                 collection.displayData();
                 break;
             case 3:
-                collection.bubbleSort();
+                collection.insertionSort();
                 break;
             case 4:
                 std::cout << "Enter the position for the value to delete: ";
@@ -59,7 +60,7 @@ void printMenu() {
     std::cout << ":::Collection Class Menu:::\n";
     std::cout << "1. Insert\n";
     std::cout << "2. Display\n";
-    std::cout << "3. Bubble Sort\n";
+    std::cout << "3. Insertion Sort\n";
     std::cout << "4. Delete\n";
     std::cout << "5. Exit\n";
     std::cout << "Enter your Choice: ";

@@ -35,10 +35,14 @@ bool Collection::isEmpty() {
 
 int Collection::insert_pos(CURRENT_TYPE what, int pos) {
     int i;
-    if (count == MAX)
+    if (count == MAX) {
+        std::cout << "\nFailed to insert " << what << " in " << pos << "-th position";
         return 0;
-    if ((pos < 1) || (pos > count + 1))
+    }
+    if ((pos < 1) || (pos > count + 1)) {
+        std::cout << "\nFailed to insert " << data << " in " << pos << "-th position";;
         return 0;
+    }
     if (pos - 1 == count)
         data[count] = what;
     else {
@@ -47,6 +51,7 @@ int Collection::insert_pos(CURRENT_TYPE what, int pos) {
         data[pos - 1] = what;
     }
     count++;
+    std::cout << "\nSuccessfully Inserted " << what << " in " << pos << "-th position.";
     return 1;
 }
 
@@ -132,6 +137,8 @@ void Collection::bubbleSort() {
 
 }
 
+
+
 void Collection::displayData() {
 
     if(count){
@@ -147,6 +154,41 @@ void Collection::displayData() {
 
 int Collection::getMax() const {
     return MAX;
+}
+
+void Collection::insertionSort() {
+    int i,j;
+    CURRENT_TYPE value;
+    for (i = 1; i < count; i++) {
+        value = data[i];
+        for (j = i; j>=0 && data[j-1] > value ; j--) {
+            data[j] = data[j-1];
+        }
+        if (j!=i)
+            data[j]=value;
+    }
+}
+
+void Collection::quickSort() {
+
+}
+
+void Collection::selectionSort() {
+    int i,j,current_minimum;
+    CURRENT_TYPE temp;
+    for(i=0;i<count-1;i++){
+        current_minimum = i;
+        for (j = i+1; j < count; j++) {
+            if (data[current_minimum]>data[j]){
+                current_minimum=j;
+            }
+        }
+        if(current_minimum!=i){
+            temp = data[i];
+            data[i] = data[current_minimum];
+            data[current_minimum] = temp;
+        }
+    }
 }
 
 

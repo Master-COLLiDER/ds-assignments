@@ -43,6 +43,12 @@ public:
 
     void displayData();
 
+    void insertionSort();
+
+    void quickSort();
+
+    void selectionSort();
+
 };
 
 
