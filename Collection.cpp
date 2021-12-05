@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include "Collection.h"
+#include "Stack.h"
 
 Collection::Collection() {
     MAX = 0;
@@ -161,6 +162,88 @@ int Collection::getMax() const {
     return MAX;
 }
 
+void Collection::insertionSort() {
+    int i,j;
+    CURRENT_TYPE value;
+    for (i = 1; i < count; i++) {
+        value = data[i];
+        for (j = i; j>=0 && data[j-1].getLength() > value.getLength() ; j--) {
+            data[j] = data[j-1];
+        }
+        if (j!=i)
+            data[j]=value;
+    }
+}
+
+void Collection::quickSort() {
+    Stack whereto;
+    OrderedPair cur_op = OrderedPair(0,count-1); //cur_op is an ordered pair
+    int start,end,position,left,right;
+    CURRENT_TYPE Pivot;
+    whereto.push(cur_op);
+    while(!whereto.isEmpty())
+    {
+        cur_op=whereto.pop();
+        start = cur_op.getX();
+        end = cur_op.getY();
+        Pivot= data[start];
+        position=start;
+        left=start+1;
+        right=end;
+        while(left<right)
+        {
+            for( ;right>left; right--) // Ensure that element towards right of Pivot are bigger
+            {
+                if(data[right].getLength()<Pivot.getLength())
+                {
+                    data[position]=data[right];
+                    data[right]=Pivot;
+                    position=right;
+                    right--;
+                    break;
+                }
+            }
+            for(  ; left < right; left++)   // Ensure that element towards left of Pivot are smaller
+            {
+                if(data[left].getLength()>=Pivot.getLength())
+                {
+                    data[position]=data[left];
+                    data[left]=Pivot;
+                    position=left;
+                    left++;
+                    break;
+                }
+            }
+        } // End of main loop for Positioning the Pivot element
+        if((position+1)<end)
+        {
+            cur_op=OrderedPair(position+1, end);
+            whereto.push(cur_op);
+        }
+        if(start<(position-1))
+        {
+            cur_op=OrderedPair(start, position-1);
+            whereto.push(cur_op);
+        }
 
 
+    }
+}
 
+void Collection::selectionSort() {
+    int i,j,current_minimum;
+    CURRENT_TYPE temp;
+    for(i=0;i<count-1;i++){
+        current_minimum = i;
+        for (j = i+1; j < count; j++) {
+            if (data[current_minimum].getLength()>data[j].getLength()){
+                current_minimum=j;
+            }
+        }
+        if(current_minimum!=i){
+            temp = data[i];
+            data[i] = data[current_minimum];
+            data[current_minimum] = temp;
+        }
+    }
+}

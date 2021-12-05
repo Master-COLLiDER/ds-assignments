@@ -42,7 +42,7 @@ int main() {
                 collection.displayData();
                 break;
             case 3:
-                collection.bubbleSort();
+                collection.quickSort();
                 break;
             case 4:
                 std::cout << "Enter the position for the value to delete: ";
@@ -66,7 +66,7 @@ void printMenu() {
     std::cout << ":::Collection Class Menu:::\n";
     std::cout << "1. Insert\n";
     std::cout << "2. Display\n";
-    std::cout << "3. Bubble Sort\n";
+    std::cout << "3. Quick Sort\n";
     std::cout << "4. Delete\n";
     std::cout << "5. Exit\n";
     std::cout << "Enter your Choice: ";
