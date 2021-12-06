@@ -173,7 +173,8 @@ void Collection::insertionSort() {
 void Collection::quickSort() {
     Stack whereto;
     OrderedPair cur_op = OrderedPair(0,count-1); //cur_op is an ordered pair
-    int start,end,Pivot,position,left,right;
+    int start,end,position,left,right;
+    float Pivot;
     whereto.push(cur_op);
     while(!whereto.isEmpty())
     {
