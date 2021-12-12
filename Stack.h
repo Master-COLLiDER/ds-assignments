@@ -1,21 +1,30 @@
-struct Node {
-    int data;
-    Node *next;
-};
+#ifndef ASSIGNMENT_STACK_H
+#define ASSIGNMENT_STACK_H
+template<typename T> class Stack {
+    struct Node {
+        T data;
+        Node *next;
 
-class Stack {
-    Node *top;
+        Node() {
+            next = nullptr;
+        }
+    } *top;
+
 public:
     Stack();
 
-    ~Stack();
+    virtual ~Stack();
 
-    bool push(int);
+    bool push(T);
 
-    int pop();
+    T pop();
 
     bool isEmpty();
 
     void display();
 
 };
+
+#include "Stack.cpp"
+
+#endif

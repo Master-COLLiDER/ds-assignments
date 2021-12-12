@@ -1,11 +1,17 @@
+#ifndef ASSIGNMENT_STACK_CPP
+#define ASSIGNMENT_STACK_CPP
+
 #include <iostream>
 #include "Stack.h"
 
-Stack::Stack() {
+
+template<typename T>
+Stack<T>::Stack() {
     top = nullptr;
 }
 
-Stack::~Stack() {
+template<typename T>
+Stack<T>::~Stack() {
     Node* temp;
     temp = top;
     while (top != nullptr)
@@ -15,8 +21,8 @@ Stack::~Stack() {
         temp = top;
     }
 }
-
-bool Stack::push(int data) {
+template<typename T>
+bool Stack<T>::push(T data) {
     Node *temp;
     temp = new Node();
     if (!temp) {
@@ -28,28 +34,29 @@ bool Stack::push(int data) {
     top = temp;
     return true;
 }
-
-int Stack::pop() {
+template<typename T>
+T Stack<T>::pop() {
     Node *temp;
 
     if (top == nullptr) {
         std::cout << "\nStack Underflow" << std::endl;
-        return 0;
+        exit(1);
     }
 
     temp = top;
     top = top->next;
-//    temp->next = nullptr;
-    int data = temp->data;
+    T data = temp->data;
     delete temp;
     return data;
 }
 
-bool Stack::isEmpty() {
+template<typename T>
+bool Stack<T>::isEmpty() {
     return top == nullptr;
 }
 
-void Stack::display() {
+template<typename T>
+void Stack<T>::display() {
     Node *temp;
     if (top == nullptr) {
         std::cout << "\nStack is Empty!!";
@@ -61,3 +68,5 @@ void Stack::display() {
         }
     }
 }
+
+#endif

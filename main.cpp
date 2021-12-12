@@ -2,9 +2,9 @@
 #include <iostream>
 
 int main() {
-    Stack stack = Stack();
+    Stack<bool> stack = Stack<bool>();
     int ch;
-    int data;
+    bool data;
     do {
         std::cout << "\nStack Program Menu\n";
         std::cout << "1.Push an Element.\n";
@@ -26,12 +26,9 @@ int main() {
                 }
                 break;
             case 2:
-                data = stack.pop();
-                if (data) {
-                    std::cout << "Element popped : " << data << std::endl;
-                } else {
-                    std::cout << "Operation Failed!" << std::endl;
-                }
+
+               std::cout << "Element popped : " << stack.pop() << std::endl;
+
                 break;
             case 3:
                 std::cout << "Elements in the Stack are: ";
