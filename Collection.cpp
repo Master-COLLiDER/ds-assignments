@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Collection.h"
 #include "Stack.h"
+#include "OrderedPair.h"
 
 Collection::Collection() {
     MAX = 0;
@@ -171,7 +172,7 @@ void Collection::insertionSort() {
 }
 
 void Collection::quickSort() {
-    Stack whereto;
+    Stack<OrderedPair> whereto;
     OrderedPair cur_op = OrderedPair(0,count-1); //cur_op is an ordered pair
     int start,end,position,left,right;
     float Pivot;

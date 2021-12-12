@@ -44,22 +44,6 @@ void OrderedPair::show() const {
     printf("(%d, %d)", x, y);
 }
 
-float OrderedPair::getLength() {
-    return sqRoot(x*x+y*y);
-}
 
-float OrderedPair::sqRoot(float number)
-{
-    int i;
-    float x2,y;
-    x2 = number * 0.5F;
-    y  = number;
-    i  = * ( int * ) &y;
-    i  =  ( i >> 1 ) + 0x1fbd1df5;
-    y  = * ( float * ) &i;
-    y = y/2 + x2/y;
-    y = y/2 + x2/y;
-    return y;
-}
 
 

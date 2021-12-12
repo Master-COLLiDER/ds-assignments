@@ -1,11 +1,17 @@
+#ifndef ASSIGNMENT_STACK_CPP
+#define ASSIGNMENT_STACK_CPP
+
 #include <iostream>
 #include "Stack.h"
 
-Stack::Stack() {
+
+template<typename T>
+Stack<T>::Stack() {
     top = nullptr;
 }
 
-Stack::~Stack() {
+template<typename T>
+Stack<T>::~Stack() {
     Node* temp;
     temp = top;
     while (top != nullptr)
@@ -15,10 +21,10 @@ Stack::~Stack() {
         temp = top;
     }
 }
-
-bool Stack::push(const OrderedPair &data) {
+template<typename T>
+bool Stack<T>::push(T data) {
     Node *temp;
-    temp = new Node;
+    temp = new Node();
     if (!temp) {
         std::cout << "\nStack Overflow" << std::endl;
         return false;
@@ -28,38 +34,25 @@ bool Stack::push(const OrderedPair &data) {
     top = temp;
     return true;
 }
-
-OrderedPair Stack::pop() {
+template<typename T>
+T Stack<T>::pop() {
     Node *temp;
 
     if (top == nullptr) {
         std::cout << "\nStack Underflow" << std::endl;
-        exit(0);
+        exit(1);
     }
 
     temp = top;
     top = top->next;
-    temp->next = nullptr;
-    OrderedPair data = temp->data;
+    T data = temp->data;
     delete temp;
     return data;
 }
 
-bool Stack::isEmpty() {
+template<typename T>
+bool Stack<T>::isEmpty() {
     return top == nullptr;
 }
 
-void Stack::display() {
-    Node *temp;
-    if (top == nullptr) {
-        std::cout << "\nStack is Empty!!";
-    } else {
-        temp = top;
-        while (temp != nullptr) {
-            temp->data.show();
-            temp = temp->next;
-            std::cout << " ->";
-        }
-    }
-}
-
+#endif

@@ -1,28 +1,30 @@
-#ifndef ASSIGNMENTS_STACK_H
-#define ASSIGNMENTS_STACK_H
+#ifndef ASSIGNMENT_STACK_H
+#define ASSIGNMENT_STACK_H
+template<typename T> class Stack {
+    struct Node {
+        T data;
+        Node *next;
 
-#include "OrderedPair.h"
+        Node() {
+            next = nullptr;
+        }
+    } *top;
 
-struct Node {
-    OrderedPair data;
-    Node *next;
-};
-
-class Stack {
-    Node *top;
 public:
     Stack();
 
-    ~Stack();
+    virtual ~Stack();
 
-    bool push(const OrderedPair &data);
+    bool push(T);
 
-    OrderedPair pop();
+    T pop();
 
     bool isEmpty();
 
     void display();
 
 };
+
+#include "Stack.cpp"
 
 #endif

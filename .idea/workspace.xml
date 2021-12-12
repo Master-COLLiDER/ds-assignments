@@ -35,7 +35,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47aa6809-fd54-4b75-9475-a13098274740" name="Default Changelist" comment="" />
+    <list default="true" id="47aa6809-fd54-4b75-9475-a13098274740" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Collection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Collection.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderedPair.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/OrderedPair.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderedPair.h" beforeDir="false" afterPath="$PROJECT_DIR$/OrderedPair.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Stack.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stack.h" beforeDir="false" afterPath="$PROJECT_DIR$/Stack.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +77,11 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="assignments" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="assignments" TARGET_NAME="assignments" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="assignments" RUN_TARGET_NAME="assignments">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -218,22 +230,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="564" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1638717742129" />
-    <state width="1481" height="260" key="GridCell.Tab.0.bottom" timestamp="1638719790891">
+    <state width="1481" height="260" key="GridCell.Tab.0.bottom" timestamp="1639309474874">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="260" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1638719790891" />
-    <state width="1481" height="260" key="GridCell.Tab.0.center" timestamp="1638719790891">
+    <state width="1481" height="260" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1639309474874" />
+    <state width="1481" height="260" key="GridCell.Tab.0.center" timestamp="1639309474873">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="260" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1638719790891" />
-    <state width="1481" height="260" key="GridCell.Tab.0.left" timestamp="1638719790891">
+    <state width="1481" height="260" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1639309474873" />
+    <state width="1481" height="260" key="GridCell.Tab.0.left" timestamp="1639309474873">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="260" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1638719790891" />
-    <state width="1481" height="260" key="GridCell.Tab.0.right" timestamp="1638719790891">
+    <state width="1481" height="260" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1639309474873" />
+    <state width="1481" height="260" key="GridCell.Tab.0.right" timestamp="1639309474873">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="260" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1638719790891" />
+    <state width="1481" height="260" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1639309474873" />
     <state width="1481" height="234" key="GridCell.Tab.1.bottom" timestamp="1638638025210">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

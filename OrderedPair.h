@@ -24,10 +24,6 @@ public:
 
     void show() const;
 
-    float getLength();
-
-    static float sqRoot(float number);
-
 };
 
 
