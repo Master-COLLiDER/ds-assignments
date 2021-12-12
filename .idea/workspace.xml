@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="assignments" targetName="assignments" />
+    </generated>
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1e8970ba-e8c8-446d-8244-bbe99537f186" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="RunManager">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
@@ -21,5 +49,29 @@
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1481" height="260" key="GridCell.Tab.0.bottom" timestamp="1639319467833">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1481" height="260" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1639319467833" />
+    <state width="1481" height="260" key="GridCell.Tab.0.center" timestamp="1639319467833">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1481" height="260" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1639319467833" />
+    <state width="1481" height="260" key="GridCell.Tab.0.left" timestamp="1639319467833">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1481" height="260" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1639319467833" />
+    <state width="1481" height="260" key="GridCell.Tab.0.right" timestamp="1639319467833">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1481" height="260" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1639319467833" />
   </component>
 </project>
