@@ -1,13 +1,267 @@
 #include <iostream>
-#include "Collection.h"
 
-void printMenu();
+/// The Queue class declaration used in radixSort()
+class Queue {
+    struct Node {
+        int info;
+        Node *next;
+    } *front, *rear;
+
+public:
+    Queue();
+    ~Queue();
+    int enqueue(int);
+    int dequeue();
+    bool isEmpty();
+};
+
+//The queue class definition
+
+///The default constructor
+Queue::Queue() {
+    front = NULL;
+    rear = NULL;
+}
+
+///The Destructor
+Queue::~Queue() {
+    Node *temp;
+    temp = front;
+    while (temp != NULL) {
+        free(temp);
+        temp = temp->next;
+    }
+}
+
+///Enqueue function returns 1 if success 0 if false
+int Queue::enqueue(int what) {
+    Node *temp;
+    temp = (Node *) malloc(sizeof(Node));
+    if (temp == NULL)
+        return 0;
+    temp->info = what;
+    temp->next = NULL;
+    if (rear != NULL)
+        rear->next = temp;
+    else {
+        front = temp;
+        rear = temp;
+    }
+    rear = temp;
+    return 1;
+}
+
+///Dequeue function returns the dequeued value
+int Queue::dequeue() {
+    int value;
+    Node *temp = front;
+
+    value = temp->info;
+    if (front->next != NULL)
+        front = front->next;
+    else {
+        front = NULL;
+        rear = NULL;
+    }
+    free(temp);
+    return value;
+}
+///isEmpty() function can be used to check if a queue is empty
+bool Queue::isEmpty() {return front == NULL;}
+///End of Queue Class definition
+
+///Collection class declaration
+class Collection {
+    int MAX, count;
+    int *data;
+public:
+    Collection();
+    Collection(int n);
+    ~Collection();
+
+    int getCount() const;
+    int getMax() const;
+    bool isEmpty();
+
+    int insert_pos(int what, int position);
+    int insert_beginning(int what);
+    int insert_end(int what);
+    int insert_after(int what, int after_which);
+    int insert_before(int what, int before_which);
+    int delete_beginning();
+    int delete_end();
+    int delete_pos(int position);
+    int delete_data(int which);
+    int indexOf(int which);
+
+    int radixSort();
+
+    void display();
+};
+
+//The Collection class definitions
+
+///this function is the default constructor of collection
+Collection::Collection() {
+    MAX = 0;
+    count = 0;
+    data = NULL;
+}
+
+///this constructor take an integer input
+///if the input n is non negative then n int location is allocated
+///and MAX is set to n
+Collection::Collection(int n) {
+    count = 0;
+    if (n < 1) {
+        MAX = 0;
+        data = NULL;
+    } else {
+        data = (int *) malloc(sizeof(int) * n);
+        if (data == NULL) {
+            MAX = 0;
+        } else {
+            MAX = n;
+        }
+    }
+}
+
+///Destructor of Collection Class frees the allocated memory pointed by data pointer
+Collection::~Collection() {
+    free(data);
+}
+
+///this function can be used to check if collection is empty
+bool Collection::isEmpty() {return count == 0;}
+
+///insert_pos takes input int what and int pos
+///and inserts what to position pos in collection if pos given valid
+int Collection::insert_pos(int what, int pos) {
+    int i;
+    if (count == MAX) {
+        return 0;
+    }
+    if ((pos < 1) || (pos > count + 1)) {
+        return 0;
+    }
+    if (pos - 1 == count)
+        data[count] = what;
+    else {
+        for (i = count; i >= pos; i--)
+            data[i] = data[i - 1];
+        data[pos - 1] = what;
+    }
+    count++;
+    return 1;
+}
+
+///These functions uses insert_pos() function
+int Collection::insert_beginning(int what) { return insert_pos(what, 1); }
+int Collection::insert_end(int what) { return insert_pos(what, count + 1); }
+int Collection::insert_after(int what, int after_which) { return insert_pos(what, indexOf(after_which) + 1); }
+int Collection::insert_before(int what, int before_which) { return insert_pos(what, indexOf(before_which)); }
+
+///takes input pos and removes element from pos position in collection
+///if given pos is valid
+int Collection::delete_pos(int pos) {
+    int i;
+    if (count < 1)
+        return 0;
+    if ((pos < 1) || (pos > count))
+        return 0;
+
+    if (pos == count) {
+        count--;
+    } else {
+        for (i = pos - 1; i < count - 1; i++) {
+            data[i] = data[i + 1];
+        }
+        count--;
+    }
+    return 1;
+}
+
+///These functions uses delete_pos() function
+int Collection::delete_beginning() { return delete_pos(1); }
+int Collection::delete_end() { return delete_pos(count - 1); }
+int Collection::delete_data(int which) { return delete_pos(indexOf(which)); }
+
+///indexOf() Returns the index of given input int which if which is found
+///the data or returns -1 if not found
+///this function is used in functions: insert_after() , insert_before(), delete_data()
+int Collection::indexOf(int which) {
+    int i = 0;
+    if (count == 0)
+        return -1;
+    while ((data[i] != which) && i < count)
+        i++;
+    return i >= count ? -1 : i + 1;
+}
+
+///Getter methods for MAX and Count
+int Collection::getMax() const {return MAX;}
+int Collection::getCount() const {return count;}
+
+
+///Display/Show function for Collection class
+void Collection::display() {
+
+    if (count) {
+        std::cout << "\n Collection Data : ";
+        for (int i = 0; i < count; i++) {
+            std::cout << data[i] << (((i + 1) != count) ? ", " : "");
+        }
+    } else {
+        std::cout << "\nCollection is Empty!";
+    }
+
+}
+
+///Radix sort function
+///the above queue data structure is used here
+///this function implemented for only positive integers
+int Collection::radixSort() {
+    int maximum = data[0],digits = 0,power,currentDigit,i,k;
+    Queue P[10]; //the declaration of array of queue
+
+    //this loop is used to find the larges element in the collection
+    for ( i = 1; i < count; i++) {
+        if (maximum < data[i])
+            maximum = data[i];
+    }
+
+    //This loop is used to find how many digits largest number has
+    while (maximum > 0) {
+        digits++;
+        maximum /= 10;
+    }
+
+    //this loop will digits times
+    for (currentDigit = 1, power = 1; currentDigit <= digits; currentDigit++, power *= 10) {
+        for (i = 0; i < count; i++) {
+            int num = data[i];
+            // num/power % 10 is used to find the remainder of currentDigit / 10
+            P[(num / power) % 10].enqueue(num);
+        }
+        k = 0;
+
+        //In this loop every value stored inside each queue is dequeued to data
+        for (i = 0; i < 10; i++) {
+            while (!P[i].isEmpty()) {
+                data[k] = P[i].dequeue();
+                k++;
+            }
+        }
+    }
+
+    return 1;
+}
 
 
 int main() {
 
     int n, choice = 0, pos;
-    CURRENT_TYPE data;
+    int data;
 
     std::cout << "Enter the Collection size: ";
     std::cin >> n;
@@ -16,27 +270,40 @@ int main() {
 
 
     while (choice != 5) {
-        printMenu();
+        std::cout << "\nRoll No.: CSM21002\n";
+        std::cout << ":::Collection Class with Radix Sort:::\n";
+        std::cout << "1. Insert\n";
+        std::cout << "2. Display\n";
+        std::cout << "3. Radix Sort\n";
+        std::cout << "4. Delete\n";
+        std::cout << "5. Exit\n";
+        std::cout << "Enter your Choice: ";
+
         std::cin >> choice;
 
         switch (choice) {
             case 1:
-//                std::cout << "Enter the value to insert: ";
-//                std::cin >> data;
-//                std::cout << "In which position: ";
-//                std::cin >> pos;
-                collection.insert_pos(20, 1);
-                collection.insert_pos(345, 1);
-                collection.insert_pos(66, 1);
-                collection.insert_pos(76, 1);
-                collection.insert_pos(623, 1);
-                collection.insert_pos(56, 1);
+                std::cout << "Enter the value to insert: ";
+                std::cin >> data;
+                std::cout << "In which position: ";
+                std::cin >> pos;
+                if(collection.insert_pos(data,pos))
+                    std::cout<<"Successfully inserted: "<<data<<"in position: "<<pos;
+                else
+                    std::cout<<"Failed to insert: "<<data<<" in position: "<<pos;
+//                collection.insert_end(20);
+//                collection.insert_end(345);
+//                collection.insert_end(66);
+//                collection.insert_end(76);
+//                collection.insert_end(623);
+//                collection.insert_end(56);
                 break;
             case 2:
-                collection.displayData();
+                collection.display();
                 break;
             case 3:
-                collection.quickSort();
+                if (collection.radixSort())
+                    std::cout << "Data Sorted!";
                 break;
             case 4:
                 std::cout << "Enter the position for the value to delete: ";
@@ -45,7 +312,7 @@ int main() {
 
                 break;
             case 5:
-                break;
+                return 0;
             default:
                 std::cout << "\nInvalid Choice!!!";
         }
@@ -55,13 +322,3 @@ int main() {
 
 }
 
-void printMenu() {
-    std::cout << "\nRoll No.: CSM21002\n";
-    std::cout << ":::Collection Class Menu:::\n";
-    std::cout << "1. Insert\n";
-    std::cout << "2. Display\n";
-    std::cout << "3. Quick Sort\n";
-    std::cout << "4. Delete\n";
-    std::cout << "5. Exit\n";
-    std::cout << "Enter your Choice: ";
-}
