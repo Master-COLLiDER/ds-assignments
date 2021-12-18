@@ -5,7 +5,7 @@ class diagonal_matrix {
 public:
     diagonal_matrix();
 
-    diagonal_matrix(const int &n);
+    explicit diagonal_matrix(const int &n);
 
     ~diagonal_matrix();
 
@@ -33,6 +33,8 @@ diagonal_matrix::diagonal_matrix(const int &n) {
         }
     } else {
         this->n = n;
+
+
         data = new int[n];
         for (i = 0; i < n; ++i) {
             data[i] = 0;
@@ -40,7 +42,6 @@ diagonal_matrix::diagonal_matrix(const int &n) {
 
     }
 }
-
 
 
 diagonal_matrix::~diagonal_matrix() {
@@ -72,9 +73,10 @@ int diagonal_matrix::get_element(const int &r, const int &c) {
 
 void diagonal_matrix::display() {
     int i, j;
+
     printf("Matrix : \n");
     for (i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
+        for (j = 0; j < n; ++j) {
             if (i == j)
                 printf("%d ", data[i]);
             else
@@ -98,18 +100,20 @@ void diagonal_matrix::set_matrix() {
 int main() {
     diagonal_matrix *matrix;
     int ch = 0, r, c, value;
+
     printf("Enter the size of the matrix: ");
     std::cin >> value;
-
     matrix = new diagonal_matrix(value);
 
     while (ch != 5) {
         printf("\nRoll No.: CSM21002\n:::Diagonal Matrix:::\n1.Set Matrix\n2.Set Element\n3.Get Element\n4.Display Matrix\n5.Exit\n:Enter your choice: ");
         std::cin >> ch;
+
         switch (ch) {
             case 1:
                 matrix->set_matrix();
                 break;
+
             case 2:
                 printf("Enter row , column and Value respectively");
                 std::cin >> r >> c >> value;
@@ -118,20 +122,25 @@ int main() {
                 else
                     printf("Can't set data in (%d,%d)", r, c);
                 break;
+
             case 3:
                 printf("Enter row , column");
                 std::cin >> r >> c;
                 printf("Element in (%d,%d) = %d", r, c, matrix->get_element(r, c));
                 break;
+
             case 4:
                 matrix->display();
                 break;
+
             case 5:
                 break;
+
             default:
                 printf("Invalid Choice!!");
         }
     }
+
     delete matrix;
     return 0;
 }

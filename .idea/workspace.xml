@@ -49,11 +49,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -70,9 +65,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639369929108</updated>
-      <workItem from="1639369932539" duration="2061000" />
+      <workItem from="1639369932539" duration="2988000" />
+      <workItem from="1639633204801" duration="515000" />
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="egh">
+      <created>1639372018162</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639372018163</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,48 +86,49 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="foiahgoahg" />
-    <option name="LAST_COMMIT_MESSAGE" value="foiahgoahg" />
+    <MESSAGE value="egh" />
+    <option name="LAST_COMMIT_MESSAGE" value="egh" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="282" y="0" key="CommitChangelistDialog2" timestamp="1639319588417">
+    <state x="282" y="0" key="CommitChangelistDialog2" timestamp="1639372017495">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="282" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1639319588417" />
-    <state width="1414" height="168" key="GridCell.Tab.0.bottom" timestamp="1639372010607">
+    <state x="282" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1639372017495" />
+    <state width="1414" height="269" key="GridCell.Tab.0.bottom" timestamp="1639372950347">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1414" height="168" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1639372010607" />
-    <state width="1414" height="168" key="GridCell.Tab.0.center" timestamp="1639372010606">
+    <state width="1414" height="269" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1639372950347" />
+    <state width="1414" height="269" key="GridCell.Tab.0.center" timestamp="1639372950347">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1414" height="168" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1639372010606" />
-    <state width="1414" height="168" key="GridCell.Tab.0.left" timestamp="1639372010606">
+    <state width="1414" height="269" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1639372950347" />
+    <state width="1414" height="269" key="GridCell.Tab.0.left" timestamp="1639372950346">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1414" height="168" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1639372010606" />
-    <state width="1414" height="168" key="GridCell.Tab.0.right" timestamp="1639372010606">
+    <state width="1414" height="269" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1639372950346" />
+    <state width="1414" height="269" key="GridCell.Tab.0.right" timestamp="1639372950347">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1414" height="168" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1639372010606" />
-    <state width="1414" height="269" key="GridCell.Tab.1.bottom" timestamp="1639371246711">
+    <state width="1414" height="269" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1639372950347" />
+    <state width="1414" height="269" key="GridCell.Tab.1.bottom" timestamp="1639372950349">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1414" height="269" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1639371246711" />
-    <state width="1414" height="269" key="GridCell.Tab.1.center" timestamp="1639371246711">
+    <state width="1414" height="269" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1639372950349" />
+    <state width="1414" height="269" key="GridCell.Tab.1.center" timestamp="1639372950349">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1414" height="269" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1639371246711" />
-    <state width="1414" height="269" key="GridCell.Tab.1.left" timestamp="1639371246711">
+    <state width="1414" height="269" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1639372950349" />
+    <state width="1414" height="269" key="GridCell.Tab.1.left" timestamp="1639372950349">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1414" height="269" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1639371246711" />
-    <state width="1414" height="269" key="GridCell.Tab.1.right" timestamp="1639371246711">
+    <state width="1414" height="269" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1639372950349" />
+    <state width="1414" height="269" key="GridCell.Tab.1.right" timestamp="1639372950349">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1414" height="269" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1639371246711" />
-    <state x="261" y="84" key="Vcs.Push.Dialog.v2" timestamp="1639319591148">
+    <state width="1414" height="269" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1639372950349" />
+    <state x="261" y="84" key="Vcs.Push.Dialog.v2" timestamp="1639372020407">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="261" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1639319591148" />
+    <state x="261" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1639372020407" />
   </component>
 </project>
