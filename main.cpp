@@ -1,6 +1,7 @@
 #include <iostream>
+using namespace std;
 
-/// The Queue class declaration used in radixSort()
+// The Queue class declaration used in radixSort()
 class Queue {
     struct Node {
         int info;
@@ -17,13 +18,13 @@ public:
 
 //The queue class definition
 
-///The default constructor
+//The default constructor
 Queue::Queue() {
     front = NULL;
     rear = NULL;
 }
 
-///The Destructor
+//The Destructor
 Queue::~Queue() {
     Node *temp;
     temp = front;
@@ -33,7 +34,7 @@ Queue::~Queue() {
     }
 }
 
-///Enqueue function returns 1 if success 0 if false
+//Enqueue function returns 1 if success 0 if false
 int Queue::enqueue(int what) {
     Node *temp;
     temp = (Node *) malloc(sizeof(Node));
@@ -51,7 +52,7 @@ int Queue::enqueue(int what) {
     return 1;
 }
 
-///Dequeue function returns the dequeued value
+//Dequeue function returns the dequeued value
 int Queue::dequeue() {
     int value;
     Node *temp = front;
@@ -66,11 +67,11 @@ int Queue::dequeue() {
     free(temp);
     return value;
 }
-///isEmpty() function can be used to check if a queue is empty
+//isEmpty() function can be used to check if a queue is empty
 bool Queue::isEmpty() {return front == NULL;}
-///End of Queue Class definition
+//End of Queue Class definition
 
-///Collection class declaration
+//Collection class declaration
 class Collection {
     int MAX, count;
     int *data;
@@ -101,16 +102,16 @@ public:
 
 //The Collection class definitions
 
-///this function is the default constructor of collection
+//this function is the default constructor of collection
 Collection::Collection() {
     MAX = 0;
     count = 0;
     data = NULL;
 }
 
-///this constructor take an integer input
-///if the input n is non negative then n int location is allocated
-///and MAX is set to n
+//this constructor take an integer input
+//if the input n is non negative then n int location is allocated
+//and MAX is set to n
 Collection::Collection(int n) {
     count = 0;
     if (n < 1) {
@@ -126,16 +127,16 @@ Collection::Collection(int n) {
     }
 }
 
-///Destructor of Collection Class frees the allocated memory pointed by data pointer
+//Destructor of Collection Class frees the allocated memory pointed by data pointer
 Collection::~Collection() {
     free(data);
 }
 
-///this function can be used to check if collection is empty
+//this function can be used to check if collection is empty
 bool Collection::isEmpty() {return count == 0;}
 
-///insert_pos takes input int what and int pos
-///and inserts what to position pos in collection if pos given valid
+//insert_pos takes input int what and int pos
+//and inserts what to position pos in collection if pos given valid
 int Collection::insert_pos(int what, int pos) {
     int i;
     if (count == MAX) {
@@ -155,14 +156,14 @@ int Collection::insert_pos(int what, int pos) {
     return 1;
 }
 
-///These functions uses insert_pos() function
+//These functions uses insert_pos() function
 int Collection::insert_beginning(int what) { return insert_pos(what, 1); }
 int Collection::insert_end(int what) { return insert_pos(what, count + 1); }
 int Collection::insert_after(int what, int after_which) { return insert_pos(what, indexOf(after_which) + 1); }
 int Collection::insert_before(int what, int before_which) { return insert_pos(what, indexOf(before_which)); }
 
-///takes input pos and removes element from pos position in collection
-///if given pos is valid
+//takes input pos and removes element from pos position in collection
+//if given pos is valid
 int Collection::delete_pos(int pos) {
     int i;
     if (count < 1)
@@ -181,14 +182,14 @@ int Collection::delete_pos(int pos) {
     return 1;
 }
 
-///These functions uses delete_pos() function
+//These functions uses delete_pos() function
 int Collection::delete_beginning() { return delete_pos(1); }
 int Collection::delete_end() { return delete_pos(count - 1); }
 int Collection::delete_data(int which) { return delete_pos(indexOf(which)); }
 
-///indexOf() Returns the index of given input int which if which is found
-///the data or returns -1 if not found
-///this function is used in functions: insert_after() , insert_before(), delete_data()
+//indexOf() Returns the index of given input int which if which is found
+//the data or returns -1 if not found
+//this function is used in functions: insert_after() , insert_before(), delete_data()
 int Collection::indexOf(int which) {
     int i = 0;
     if (count == 0)
@@ -198,29 +199,32 @@ int Collection::indexOf(int which) {
     return i >= count ? -1 : i + 1;
 }
 
-///Getter methods for MAX and Count
+//Getter methods for MAX and Count
 int Collection::getMax() const {return MAX;}
 int Collection::getCount() const {return count;}
 
 
-///Display/Show function for Collection class
+//Display/Show function for Collection class
 void Collection::display() {
 
     if (count) {
-        std::cout << "\n Collection Data : ";
+        cout << "\n Collection Data : ";
         for (int i = 0; i < count; i++) {
-            std::cout << data[i] << (((i + 1) != count) ? ", " : "");
+            cout << data[i] << (((i + 1) != count) ? ", " : "");
         }
     } else {
-        std::cout << "\nCollection is Empty!";
+        cout << "\nCollection is Empty!";
     }
 
 }
 
-///Radix sort function
-///the above queue data structure is used here
-///this function implemented for only positive integers
+//Radix sort function
+//the above queue data structure is used here
+//this function sorts the data given that elements are non-negative
 int Collection::radixSort() {
+    if (count<1)
+        return 0;
+    
     int maximum = data[0],digits = 0,power,currentDigit,i,k;
     Queue P[10]; //the declaration of array of queue
 
@@ -263,34 +267,34 @@ int main() {
     int n, choice = 0, pos;
     int data;
 
-    std::cout << "Enter the Collection size: ";
-    std::cin >> n;
+    cout << "Enter the Collection size: ";
+    cin >> n;
 
     Collection collection = Collection(n);
 
 
     while (choice != 5) {
-        std::cout << "\nRoll No.: CSM21002\n";
-        std::cout << ":::Collection Class with Radix Sort:::\n";
-        std::cout << "1. Insert\n";
-        std::cout << "2. Display\n";
-        std::cout << "3. Radix Sort\n";
-        std::cout << "4. Delete\n";
-        std::cout << "5. Exit\n";
-        std::cout << "Enter your Choice: ";
+        cout << "\nRoll No.: CSM21002\n";
+        cout << ":::Collection Class with Radix Sort:::\n";
+        cout << "1. Insert\n";
+        cout << "2. Display\n";
+        cout << "3. Radix Sort\n";
+        cout << "4. Delete\n";
+        cout << "5. Exit\n";
+        cout << "Enter your Choice: ";
 
-        std::cin >> choice;
+        cin >> choice;
 
         switch (choice) {
             case 1:
-                std::cout << "Enter the value to insert: ";
-                std::cin >> data;
-                std::cout << "In which position: ";
-                std::cin >> pos;
+                cout << "Enter the value to insert: ";
+                cin >> data;
+                cout << "In which position: ";
+                cin >> pos;
                 if(collection.insert_pos(data,pos))
-                    std::cout<<"Successfully inserted: "<<data<<"in position: "<<pos;
+                    cout<<"Successfully inserted: "<<data<<"in position: "<<pos;
                 else
-                    std::cout<<"Failed to insert: "<<data<<" in position: "<<pos;
+                    cout<<"Failed to insert: "<<data<<" in position: "<<pos;
 //                collection.insert_end(20);
 //                collection.insert_end(345);
 //                collection.insert_end(66);
@@ -303,18 +307,18 @@ int main() {
                 break;
             case 3:
                 if (collection.radixSort())
-                    std::cout << "Data Sorted!";
+                    cout << "Data Sorted!";
                 break;
             case 4:
-                std::cout << "Enter the position for the value to delete: ";
-                std::cin >> pos;
-                std::cout << "Deleted " << collection.delete_pos(pos) << " in " << pos << "-th position.";
+                cout << "Enter the position for the value to delete: ";
+                cin >> pos;
+                cout << "Deleted " << collection.delete_pos(pos) << " in " << pos << "-th position.";
 
                 break;
             case 5:
                 return 0;
             default:
-                std::cout << "\nInvalid Choice!!!";
+                cout << "\nInvalid Choice!!!";
         }
     }
 

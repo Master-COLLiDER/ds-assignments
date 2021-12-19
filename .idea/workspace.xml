@@ -35,17 +35,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47aa6809-fd54-4b75-9475-a13098274740" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collection.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collection.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderedPair.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderedPair.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stack.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stack.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="47aa6809-fd54-4b75-9475-a13098274740" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,11 +75,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="assignments" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="assignments" TARGET_NAME="assignments" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="assignments" RUN_TARGET_NAME="assignments">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -191,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638717742558</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="geaojpega">
+      <created>1639835658199</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1639835658199</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +211,8 @@
     <MESSAGE value="oghiag" />
     <MESSAGE value="gioeahg" />
     <MESSAGE value="oahgoga" />
-    <option name="LAST_COMMIT_MESSAGE" value="oahgoga" />
+    <MESSAGE value="geaojpega" />
+    <option name="LAST_COMMIT_MESSAGE" value="geaojpega" />
   </component>
   <component name="WindowStateProjectService">
     <state x="219" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638719566647">
@@ -234,26 +227,26 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="876" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1638198852029" />
-    <state x="564" y="0" key="CommitChangelistDialog2" timestamp="1638717742129">
+    <state x="564" y="0" key="CommitChangelistDialog2" timestamp="1639835657613">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="564" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1638717742129" />
-    <state width="1481" height="197" key="GridCell.Tab.0.bottom" timestamp="1639835641620">
+    <state x="564" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1639835657613" />
+    <state width="1481" height="197" key="GridCell.Tab.0.bottom" timestamp="1639835737974">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="197" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1639835641620" />
-    <state width="1481" height="197" key="GridCell.Tab.0.center" timestamp="1639835641620">
+    <state width="1481" height="197" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1639835737974" />
+    <state width="1481" height="197" key="GridCell.Tab.0.center" timestamp="1639835737974">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="197" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1639835641620" />
-    <state width="1481" height="197" key="GridCell.Tab.0.left" timestamp="1639835641620">
+    <state width="1481" height="197" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1639835737974" />
+    <state width="1481" height="197" key="GridCell.Tab.0.left" timestamp="1639835737973">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="197" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1639835641620" />
-    <state width="1481" height="197" key="GridCell.Tab.0.right" timestamp="1639835641620">
+    <state width="1481" height="197" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1639835737973" />
+    <state width="1481" height="197" key="GridCell.Tab.0.right" timestamp="1639835737974">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="197" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1639835641620" />
+    <state width="1481" height="197" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1639835737974" />
     <state width="1481" height="234" key="GridCell.Tab.1.bottom" timestamp="1638638025210">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -282,10 +275,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="989" y="308" key="VCS.ChangelistChooser/0.0.1536.834@0.0.1536.834" timestamp="1638187056135" />
-    <state x="522" y="84" key="Vcs.Push.Dialog.v2" timestamp="1638196848439">
+    <state x="522" y="84" key="Vcs.Push.Dialog.v2" timestamp="1639835665113">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="522" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1638196848439" />
+    <state x="522" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1639835665113" />
     <state x="681" y="25" width="855" height="740" key="find.popup" timestamp="1638192659155">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
