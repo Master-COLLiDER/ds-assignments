@@ -224,19 +224,30 @@ int Collection::radixSort() {
     if (count<1)
         return 0;
 
-    int maximum = data[0],digits = 0,power,cDigit,i,k,cNum,container;
+    int maximum = data[0],minimum = data[0],maxDigit,digits = 0,power,cDigit,i,k,cNum,container;
     Queue P[10]; //the declaration of array of queue
 
     //this loop is used to find the larges element in the collection
     for ( i = 1; i < count; i++) {
         if (maximum < data[i])
             maximum = data[i];
+
+        if (minimum > data[i])
+            minimum = data[i];
     }
 
-    //This loop is used to find how many digits largest number has
-    while (maximum > 0) {
+    //this part is used to change -ve container number +ve
+    if (minimum < 0) {
+        minimum = ~minimum + 1;
+    }
+
+    maxDigit = minimum>maximum?minimum:maximum;
+
+
+    //This loop is used to find how many digits maxDigit integer has
+    while (maxDigit > 0) {
         digits++;
-        maximum /= 10;
+        maxDigit /= 10;
     }
 
     //this loop will digits times
@@ -245,6 +256,12 @@ int Collection::radixSort() {
             cNum = data[i];
             // num/power % 10 is used to find the remainder of currentDigit / 10
             container = ((cNum / power) % 10);
+
+            //this part is used to change -ve container number +ve
+            if (container < 0) {
+                container = ~container + 1;
+            }
+
             P[container].enqueue(cNum);
         }
         k = 0;
@@ -257,6 +274,28 @@ int Collection::radixSort() {
             }
         }
     }
+
+    //This part sorts -ve number left side and +ve number right side of the array
+    for (i = 0,k=-1; i < count; i++) {
+        if(data[i]<0)
+        {
+            P[0].enqueue(data[i]);
+            k++;
+        }
+        else{
+            P[1].enqueue(data[i]);
+        }
+    }
+    i = k+1;
+    while(i<count){
+        data[i] = P[1].dequeue();
+        i++;
+    }
+    while(k>=0){
+        data[k] = P[0].dequeue();
+        k--;
+    }
+    // End here
 
     return 1;
 }

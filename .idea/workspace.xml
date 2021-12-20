@@ -35,8 +35,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47aa6809-fd54-4b75-9475-a13098274740" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="47aa6809-fd54-4b75-9475-a13098274740" name="Default Changelist" comment="rtjrj">
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +50,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="collection" />
+        <entry key="$PROJECT_DIR$" value="collection_with_radix_sort" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -233,7 +232,9 @@
     <MESSAGE value="geaojpega" />
     <MESSAGE value="oaeghoiaegh" />
     <MESSAGE value="agjoipaegj" />
-    <option name="LAST_COMMIT_MESSAGE" value="agjoipaegj" />
+    <MESSAGE value="oaghioagh" />
+    <MESSAGE value="rtjrj" />
+    <option name="LAST_COMMIT_MESSAGE" value="rtjrj" />
   </component>
   <component name="WindowStateProjectService">
     <state x="219" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638719566647">
@@ -248,10 +249,14 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="876" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1638198852029" />
-    <state x="564" y="0" key="CommitChangelistDialog2" timestamp="1640009753561">
+    <state x="564" y="0" key="CommitChangelistDialog2" timestamp="1640018254783">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="564" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1640009753561" />
+    <state x="564" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1640018254783" />
+    <state x="61" y="76" key="DiffContextDialog" timestamp="1640018193265">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="61" y="76" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1640018193265" />
     <state width="1414" height="222" key="GridCell.Tab.0.bottom" timestamp="1640011425551">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -296,10 +301,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="989" y="308" key="VCS.ChangelistChooser/0.0.1536.834@0.0.1536.834" timestamp="1638187056135" />
-    <state x="522" y="84" key="Vcs.Push.Dialog.v2" timestamp="1640009756512">
+    <state x="522" y="84" key="Vcs.Push.Dialog.v2" timestamp="1640018244635">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="522" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1640009756512" />
+    <state x="522" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1640018244635" />
     <state x="681" y="25" width="855" height="740" key="find.popup" timestamp="1638192659155">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
