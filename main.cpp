@@ -224,7 +224,7 @@ void Collection::display() {
 int Collection::radixSort() {
     if (count<1)
         return 0;
-    
+
     int maximum = data[0],digits = 0,power,currentDigit,i,k;
     Queue P[10]; //the declaration of array of queue
 
@@ -287,14 +287,21 @@ int main() {
 
         switch (choice) {
             case 1:
-                cout << "Enter the value to insert: ";
+                cout << "\nEnter the value to insert: ";
                 cin >> data;
-                cout << "In which position: ";
-                cin >> pos;
-                if(collection.insert_pos(data,pos))
-                    cout<<"Successfully inserted: "<<data<<"in position: "<<pos;
+                if(collection.insert_beginning(data))
+                    cout<<"\nSuccessfully inserted: "<<data<<"in beginning of the collection.";
                 else
-                    cout<<"Failed to insert: "<<data<<" in position: "<<pos;
+                    cout<<"\nFailed to insert: "<<data;
+
+//                cout << "In which position: ";
+//                cin >> pos;
+//                if(collection.insert_pos(data,pos))
+//                    cout<<"Successfully inserted: "<<data<<"in position: "<<pos;
+//                else
+//                    cout<<"Failed to insert: "<<data<<" in position: "<<pos;
+
+
 //                collection.insert_end(20);
 //                collection.insert_end(345);
 //                collection.insert_end(66);
@@ -307,13 +314,12 @@ int main() {
                 break;
             case 3:
                 if (collection.radixSort())
-                    cout << "Data Sorted!";
+                    cout << "\nData Sorted!";
                 break;
             case 4:
-                cout << "Enter the position for the value to delete: ";
+                cout << "\nEnter the position for the value to delete: ";
                 cin >> pos;
-                cout << "Deleted " << collection.delete_pos(pos) << " in " << pos << "-th position.";
-
+                cout << "\nDeleted " << collection.delete_pos(pos) << " in " << pos << "-th position.";
                 break;
             case 5:
                 return 0;
