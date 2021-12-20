@@ -219,7 +219,7 @@ void Collection::display() {
 
 //Radix sort function
 //the above queue data structure is used here
-//this function sorts the data given that elements are non-negative
+//this function sorts the data given that elements are integers
 int Collection::radixSort() {
     if (count<1)
         return 0;
