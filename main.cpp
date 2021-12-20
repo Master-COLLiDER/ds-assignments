@@ -46,7 +46,6 @@ int Queue::enqueue(int what) {
         rear->next = temp;
     else {
         front = temp;
-        rear = temp;
     }
     rear = temp;
     return 1;
@@ -225,7 +224,7 @@ int Collection::radixSort() {
     if (count<1)
         return 0;
 
-    int maximum = data[0],digits = 0,power,currentDigit,i,k;
+    int maximum = data[0],digits = 0,power,cDigit,i,k,cNum,container;
     Queue P[10]; //the declaration of array of queue
 
     //this loop is used to find the larges element in the collection
@@ -241,11 +240,12 @@ int Collection::radixSort() {
     }
 
     //this loop will digits times
-    for (currentDigit = 1, power = 1; currentDigit <= digits; currentDigit++, power *= 10) {
+    for (cDigit = 1, power = 1; cDigit <= digits; cDigit++, power *= 10) {
         for (i = 0; i < count; i++) {
-            int num = data[i];
+            cNum = data[i];
             // num/power % 10 is used to find the remainder of currentDigit / 10
-            P[(num / power) % 10].enqueue(num);
+            container = ((cNum / power) % 10);
+            P[container].enqueue(cNum);
         }
         k = 0;
 
@@ -293,6 +293,7 @@ int main() {
                     cout<<"\nSuccessfully inserted: "<<data<<"in beginning of the collection.";
                 else
                     cout<<"\nFailed to insert: "<<data;
+
 
 //                cout << "In which position: ";
 //                cin >> pos;

@@ -78,6 +78,11 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="assignments" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="assignments" TARGET_NAME="assignments" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="assignments" RUN_TARGET_NAME="assignments">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -104,7 +109,7 @@
       <workItem from="1638195900629" duration="4591000" />
       <workItem from="1638711984001" duration="3149000" />
       <workItem from="1639933389351" duration="195000" />
-      <workItem from="1640008850571" duration="892000" />
+      <workItem from="1640008850571" duration="3209000" />
     </task>
     <task id="LOCAL-00001" summary="oaehgoaiegh">
       <created>1638185302856</created>
@@ -190,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639933555044</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="agjoipaegj">
+      <created>1640009754180</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1640009754180</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +232,8 @@
     <MESSAGE value="oahgoga" />
     <MESSAGE value="geaojpega" />
     <MESSAGE value="oaeghoiaegh" />
-    <option name="LAST_COMMIT_MESSAGE" value="oaeghoiaegh" />
+    <MESSAGE value="agjoipaegj" />
+    <option name="LAST_COMMIT_MESSAGE" value="agjoipaegj" />
   </component>
   <component name="WindowStateProjectService">
     <state x="219" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638719566647">
@@ -235,26 +248,26 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="876" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1638198852029" />
-    <state x="564" y="0" key="CommitChangelistDialog2" timestamp="1639933554492">
+    <state x="564" y="0" key="CommitChangelistDialog2" timestamp="1640009753561">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="564" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1639933554492" />
-    <state width="1414" height="222" key="GridCell.Tab.0.bottom" timestamp="1640009739798">
+    <state x="564" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1640009753561" />
+    <state width="1414" height="222" key="GridCell.Tab.0.bottom" timestamp="1640011425551">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1414" height="222" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1640009739798" />
-    <state width="1414" height="222" key="GridCell.Tab.0.center" timestamp="1640009739798">
+    <state width="1414" height="222" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1640011425551" />
+    <state width="1414" height="222" key="GridCell.Tab.0.center" timestamp="1640011425551">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1414" height="222" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1640009739798" />
-    <state width="1414" height="222" key="GridCell.Tab.0.left" timestamp="1640009739797">
+    <state width="1414" height="222" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1640011425551" />
+    <state width="1414" height="222" key="GridCell.Tab.0.left" timestamp="1640011425551">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1414" height="222" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1640009739797" />
-    <state width="1414" height="222" key="GridCell.Tab.0.right" timestamp="1640009739798">
+    <state width="1414" height="222" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1640011425551" />
+    <state width="1414" height="222" key="GridCell.Tab.0.right" timestamp="1640011425551">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1414" height="222" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1640009739798" />
+    <state width="1414" height="222" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1640011425551" />
     <state width="1481" height="234" key="GridCell.Tab.1.bottom" timestamp="1638638025210">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -283,10 +296,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="989" y="308" key="VCS.ChangelistChooser/0.0.1536.834@0.0.1536.834" timestamp="1638187056135" />
-    <state x="522" y="84" key="Vcs.Push.Dialog.v2" timestamp="1639933560271">
+    <state x="522" y="84" key="Vcs.Push.Dialog.v2" timestamp="1640009756512">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="522" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1639933560271" />
+    <state x="522" y="84" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1640009756512" />
     <state x="681" y="25" width="855" height="740" key="find.popup" timestamp="1638192659155">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
