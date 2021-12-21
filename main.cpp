@@ -34,7 +34,7 @@ Queue::~Queue() {
     }
 }
 
-//Enqueue function returns 1 if success 0 if false
+//Enqueue function returns 1 if success 0 if failed
 int Queue::enqueue(int what) {
     Node *temp;
     temp = (Node *) malloc(sizeof(Node));
@@ -183,7 +183,7 @@ int Collection::delete_pos(int pos) {
 
 //These functions uses delete_pos() function
 int Collection::delete_beginning() { return delete_pos(1); }
-int Collection::delete_end() { return delete_pos(count - 1); }
+int Collection::delete_end() { return delete_pos(count); }
 int Collection::delete_data(int which) { return delete_pos(indexOf(which)); }
 
 //indexOf() Returns the index of given input int which if which is found
@@ -326,12 +326,12 @@ int main() {
 
         switch (choice) {
             case 1:
-                cout << "\nEnter the value to insert: ";
-                cin >> data;
-                if(collection.insert_beginning(data))
-                    cout<<"\nSuccessfully inserted: "<<data<<"in beginning of the collection.";
-                else
-                    cout<<"\nFailed to insert: "<<data;
+//                cout << "\nEnter the value to insert: ";
+//                cin >> data;
+//                if(collection.insert_beginning(data))
+//                    cout<<"\nSuccessfully inserted: "<<data<<"in beginning of the collection.";
+//                else
+//                    cout<<"\nFailed to insert: "<<data;
 
 
 //                cout << "In which position: ";
@@ -342,12 +342,12 @@ int main() {
 //                    cout<<"Failed to insert: "<<data<<" in position: "<<pos;
 
 
-//                collection.insert_end(20);
-//                collection.insert_end(345);
-//                collection.insert_end(66);
-//                collection.insert_end(76);
-//                collection.insert_end(623);
-//                collection.insert_end(56);
+                collection.insert_end(20);
+                collection.insert_end(345);
+                collection.insert_end(66);
+                collection.insert_end(76);
+                collection.insert_end(623);
+                collection.insert_end(56);
                 break;
             case 2:
                 collection.display();
