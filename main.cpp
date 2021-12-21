@@ -183,7 +183,7 @@ int Collection::delete_pos(int pos) {
 
 //These functions uses delete_pos() function
 int Collection::delete_beginning() { return delete_pos(1); }
-int Collection::delete_end() { return delete_pos(count - 1); }
+int Collection::delete_end() { return delete_pos(count); }
 int Collection::delete_data(int which) { return delete_pos(indexOf(which)); }
 
 //indexOf() Returns the index of given input int which if which is found
@@ -219,7 +219,7 @@ void Collection::display() {
 
 //Radix sort function
 //the above queue data structure is used here
-//this function sorts the data given that elements are non-negative
+//this function sorts the data given that elements are non-negative integers
 int Collection::radixSort() {
     if (count<1)
         return 0;
@@ -243,14 +243,13 @@ int Collection::radixSort() {
     for (cDigit = 1, power = 1; cDigit <= digits; cDigit++, power *= 10) {
         for (i = 0; i < count; i++) {
             cNum = data[i];
-            // num/power % 10 is used to find the remainder of currentDigit / 10
+            // num / power % 10 is used to find the remainder of current digit by 10
             container = ((cNum / power) % 10);
             P[container].enqueue(cNum);
         }
-        k = 0;
 
         //In this loop every value stored inside each queue is dequeued to data
-        for (i = 0; i < 10; i++) {
+        for (i = 0 , k = 0; i < 10; i++) {
             while (!P[i].isEmpty()) {
                 data[k] = P[i].dequeue();
                 k++;
