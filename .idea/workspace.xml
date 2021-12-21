@@ -36,7 +36,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47aa6809-fd54-4b75-9475-a13098274740" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,6 +104,7 @@
       <workItem from="1638711984001" duration="3149000" />
       <workItem from="1639933389351" duration="195000" />
       <workItem from="1640008850571" duration="3209000" />
+      <workItem from="1640073432820" duration="311000" />
     </task>
     <task id="LOCAL-00001" summary="oaehgoaiegh">
       <created>1638185302856</created>
@@ -197,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640009754180</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="egwsg">
+      <created>1640073724805</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1640073724805</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +235,8 @@
     <MESSAGE value="geaojpega" />
     <MESSAGE value="oaeghoiaegh" />
     <MESSAGE value="agjoipaegj" />
-    <option name="LAST_COMMIT_MESSAGE" value="agjoipaegj" />
+    <MESSAGE value="egwsg" />
+    <option name="LAST_COMMIT_MESSAGE" value="egwsg" />
   </component>
   <component name="WindowStateProjectService">
     <state x="219" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638719566647">

@@ -96,7 +96,7 @@ public:
 
     int radixSort();
 
-    void display();
+    int display();
 };
 
 //The Collection class definitions
@@ -204,7 +204,7 @@ int Collection::getCount() const {return count;}
 
 
 //Display/Show function for Collection class
-void Collection::display() {
+int Collection::display() {
 
     if (count) {
         cout << "\n Collection Data : ";
@@ -214,7 +214,7 @@ void Collection::display() {
     } else {
         cout << "\nCollection is Empty!";
     }
-
+    return 1;
 }
 
 //Radix sort function
