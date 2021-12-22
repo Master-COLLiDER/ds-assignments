@@ -3,13 +3,12 @@
 
 int main() {
     Heap heap(10);
-    heap.insert_heap(4);
-    heap.insert_heap(7);
     heap.insert_heap(5);
-    heap.insert_heap(9);
+    heap.insert_heap(4);
     heap.insert_heap(8);
 
 
+    heap.delete_heap();
 
     if (heap.is_empty())
         printf("Empty Heap!");

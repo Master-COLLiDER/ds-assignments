@@ -44,8 +44,8 @@ int Heap::delete_heap() {
         int child = 1, cur = 0, value;
         value = data[count];
         data[0] = value;
-        while (child != cur) {
-            if (data[child] >= data[cur])
+        while (cur<=count-1) {
+            if (data[child] <= data[cur])
                 break;
             data[cur] = data[child];
             data[child] = value;
