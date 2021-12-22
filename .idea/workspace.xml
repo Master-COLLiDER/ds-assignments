@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="assignments" targetName="assignments" />
@@ -12,10 +30,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d695161-7640-4bb0-ab2b-c8d9e2ab4d67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Heap.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Heap.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Heap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Heap.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,11 +63,6 @@
     <property name="cf.first.check.clang-format" value="false" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -71,32 +82,62 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640112748779</updated>
-      <workItem from="1640112751554" duration="2456000" />
+      <workItem from="1640112751554" duration="2475000" />
+      <workItem from="1640144370700" duration="1107000" />
     </task>
+    <task id="LOCAL-00001" summary="gaepegaop">
+      <created>1640115234853</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640115234853</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="gaepegaop" />
+    <option name="LAST_COMMIT_MESSAGE" value="gaepegaop" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1481" height="198" key="GridCell.Tab.0.bottom" timestamp="1640115219237">
+    <state x="282" y="0" key="CommitChangelistDialog2" timestamp="1640115234389">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="198" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1640115219237" />
-    <state width="1481" height="198" key="GridCell.Tab.0.center" timestamp="1640115219237">
+    <state x="282" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1640115234389" />
+    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1640145129741">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="198" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1640115219237" />
-    <state width="1481" height="198" key="GridCell.Tab.0.left" timestamp="1640115219237">
+    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1640145129741" />
+    <state width="711" height="197" key="GridCell.Tab.0.bottom" timestamp="1640145113408">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="198" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1640115219237" />
-    <state width="1481" height="198" key="GridCell.Tab.0.right" timestamp="1640115219237">
+    <state width="711" height="197" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1640145113408" />
+    <state width="711" height="197" key="GridCell.Tab.0.center" timestamp="1640145113407">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1481" height="198" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1640115219237" />
+    <state width="711" height="197" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1640145113407" />
+    <state width="711" height="197" key="GridCell.Tab.0.left" timestamp="1640145113407">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="711" height="197" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1640145113407" />
+    <state width="711" height="197" key="GridCell.Tab.0.right" timestamp="1640145113408">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="711" height="197" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1640145113408" />
   </component>
 </project>
