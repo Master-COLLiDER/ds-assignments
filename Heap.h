@@ -15,7 +15,7 @@ public:
     }
     Heap(int);
     int insert_heap(int);
-    int Heapify();
+//    int Heapify();
     int delete_heap();
     bool is_empty();
     void show();

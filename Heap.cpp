@@ -56,23 +56,23 @@ int Heap::delete_heap() {
     return temp;
 }
 
-int Heap::Heapify() {
-
-    int temp, i, j;
-    for (i = 1; i < count; i++) {
-        if (data[i] > data[(i - 1) / 2]) {
-            j = i;
-            while (data[j] > data[(j - 1) / 2]) {
-                temp = data[j];
-                data[j] = data[(j - 1) / 2];
-                data[(j - 1) / 2] = temp;
-                j = (j - 1) / 2;
-            }
-        }
-    }
-
-    return 1;
-}
+//int Heap::Heapify() {
+//
+//    int temp, i, j;
+//    for (i = 1; i < count; i++) {
+//        if (data[i] > data[(i - 1) / 2]) {
+//            j = i;
+//            while (data[j] > data[(j - 1) / 2]) {
+//                temp = data[j];
+//                data[j] = data[(j - 1) / 2];
+//                data[(j - 1) / 2] = temp;
+//                j = (j - 1) / 2;
+//            }
+//        }
+//    }
+//
+//    return 1;
+//}
 
 //int Heap::delete_heap() {
 //    if (count<1)
