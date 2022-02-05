@@ -97,7 +97,9 @@ public:
                 _edges = NULL;
             } else {
                 for (int i = 0; i < n; i++) {
-                    _node_label[i] = (char *) malloc(sizeof(char) * 20);
+                    _node_label[i] = (char *) malloc(sizeof(char) * 19);
+                    char cur[20] = "No Label";
+                    strcpy(_node_label[i], cur);
                 }
                 _edges = (Queue<graphEdge> *) malloc(n * sizeof(Queue<graphEdge>));
                 if (_edges == NULL) {
@@ -114,24 +116,35 @@ public:
         }
     }
 
-
-    bool hasTheEdge(int fromNode, int toNode) {
+    qNode<graphEdge> *searchEdge(int fromNode, int toNode) {
         auto temp = _edges[fromNode].front();
 
         while (temp != NULL) {
             if (temp->_data._destination == toNode)
-                return true;
+                return temp;
             temp = temp->_next;
         }
-        return false;
+        return NULL;
+    }
+
+    bool hasTheEdge(int fromNode, int toNode) {
+        if (searchEdge(fromNode, toNode) == NULL)
+            return false;
+        return true;
+    }
+
+    bool isValidNode(int nodeNumber) {
+        if ((nodeNumber < 0) || (nodeNumber >= _node_count))
+            return false;
+        return true;
     }
 
     bool setEdge(int fromNode, int toNode, float weight) {
         graphEdge data;
         int status;
-        if ((fromNode < 0) || (fromNode >= _node_count))
+        if (!isValidNode(fromNode))
             return false;
-        if ((toNode < 0) || (toNode >= _node_count))
+        if (!isValidNode(toNode))
             return false;
         if (fromNode == toNode) //Simple graph
             return false;
@@ -146,14 +159,13 @@ public:
     }
 
     float getWeight(int fromNode, int toNode) {
-        if ((fromNode < 0) || (fromNode >= _node_count))
+        if (!isValidNode(fromNode))
             return 0;
-        if ((toNode < 0) || (toNode >= _node_count))
+        if (!isValidNode(toNode))
             return 0;
         if (fromNode == toNode) //Simple graph
             return 0;
         auto temp = _edges[fromNode].front();
-
         while (temp != NULL) {
             if (temp->_data._destination == toNode)
                 return (temp->_data._weight);
@@ -165,7 +177,7 @@ public:
 
     int outDegree(int nodeNumber) {
         int degree = 0;
-        if ((nodeNumber >= _node_count) || (nodeNumber < 0))
+        if (!isValidNode(nodeNumber))
             return degree;
         auto temp = _edges[nodeNumber].front();
         while (temp != NULL) {
@@ -177,7 +189,7 @@ public:
 
     int inDegree(int nodeNumber) {
         int degree = 0;
-        if ((nodeNumber >= _node_count) || (nodeNumber < 0))
+        if (!isValidNode(nodeNumber))
             return degree;
         for (int i = 0; i < _node_count; ++i) {
             if (i == nodeNumber)
@@ -190,14 +202,56 @@ public:
 
     bool setLabel(int nodeNumber, char *labelText) {
         char *cur;
-        if ((nodeNumber < 0) || (nodeNumber >= _node_count))
+        if (!isValidNode(nodeNumber))
             return false; // invalid _destination
         if (strlen(labelText) > 19)
             labelText[19] = '\0'; //Labels are maximum 19 symbol long
-
         strcpy(_node_label[nodeNumber], labelText);
+        return true;
+    }
+
+    char *getLabel(int nodeNumber) {
+        char *cur;
+        if (!isValidNode(nodeNumber)) {
+            return NULL; // invalid _destination
+        } else {
+            cur = strdup(_node_label[nodeNumber]);
+        }
+        return cur;
+    }
+
+
+    int showOutEdges(int nodeNumber) {
+        if (!isValidNode(nodeNumber))
+            return 0;
+        auto temp = _edges[nodeNumber].front();
+
+        printf("Out Edges from node %d: %s ---> ", nodeNumber, getLabel(nodeNumber));
+        while (temp != NULL) {
+            printf("( %d: %s , Weight: %f ),", temp->_data._destination, getLabel(temp->_data._destination),
+                   temp->_data._weight);
+            temp = temp->_next;
+        }
         return 1;
     }
+
+    int showInEdges(int nodeNumber) {
+        if (!isValidNode(nodeNumber))
+            return 0;
+        printf("In Edges to node %d: %s <--- ", nodeNumber, getLabel(nodeNumber));
+        for (int i = 0; i < _node_count; ++i) {
+            if (i == nodeNumber)
+                continue;
+            auto temp = searchEdge(i, nodeNumber);
+            if (temp != NULL)
+                printf("( %d: %s , Weight: %f ),", i, getLabel(i),
+                       temp->_data._weight);
+        }
+        return 1;
+    }
+
+    int BFS(int start_pos = 0);
+    Queue<graphEdge> Shortest_Path(int from,int to);
 
 };
 
@@ -210,7 +264,10 @@ int main() {
     g1.setEdge(1, 2, 34);
     g1.setEdge(1, 3, 3.1);
     g1.setEdge(2, 1, 2.1);
+    g1.setLabel(1, "Mumbai");
+    g1.setLabel(2, "Kolkata");
+    g1.setLabel(3, "Chennai");
+    g1.showInEdges(1);
 
-    std::cout << "outDegree 1 : " << g1.outDegree(1);
     return 0;
 }

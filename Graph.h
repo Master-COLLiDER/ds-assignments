@@ -58,8 +58,7 @@ public:
     //Todo: Restructured graph should be stored in the same object, that has activated this function.
 
 
-    PATH Shortest_Path(int from,
-                       int to);
+    PATH Shortest_Path(int from,int to);
     //Todo: calculate the shortest path from the "from" _destination to all _destination, and sends the path intended path,
     // PATH is a finite (What??? hint. Longest path may have all the nodes) set of integers,
     // If no path exists, carinality of this set must be zero.
