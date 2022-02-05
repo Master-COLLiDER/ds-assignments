@@ -3,4 +3,5 @@ project(assignments)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(assignments main.cpp)
+add_executable(assignments main.cpp Graph.h Graph.cpp)
+add_executable(maintest main.cpp)
