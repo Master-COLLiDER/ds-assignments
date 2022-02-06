@@ -5,8 +5,8 @@
 #define CSM21002_QUEUE_H
 template<typename T>
 struct qNode {
-    T _data{NULL};
-    qNode *_next{NULL};
+    T _data;
+    qNode *_next;
     float _priority{0};
 };
 
@@ -57,7 +57,7 @@ public:
             _front = _rear = temp;
         } else {
 
-            if (_front->_priority > priority) {
+            if (_front->_priority >= priority) {
                 temp->_next = _front;
                 _front = temp;
             } else {
@@ -66,15 +66,17 @@ public:
                        tempnodeptr->_next->_priority < priority) {
                     tempnodeptr = tempnodeptr->_next;
                 }
-
+//                if(tempnodeptr->_next=NULL)
+//                     _rear = tempnodeptr
                 temp->_next = tempnodeptr->_next;
-                temp->_next = temp;
+                tempnodeptr->_next = temp;
             }
 
         }
         return true;
     }
-    float getFrontPriority(){
+
+    float getFrontPriority() {
         if (isEmpty())
             return 0;
         return _front->_priority;
@@ -319,39 +321,82 @@ public:
         return 1;
     }
 
-    qNode<graphEdge> *shortestPath(int sourceNode, int destinationNode) {
-        if (!isValidNode(sourceNode))
-            return  NULL;
-        if (!isValidNode(destinationNode))
-            return  NULL;
+    struct PATH{
+        float cost{-1};
+        int prev{0};
+    };
 
-        float cost[_node_count];
-        int prev[_node_count];
-        struct graphPQEdge{
-            int from;
-            int to;
-        };
-        Queue<graphPQEdge> Q;
-        for (int v = 0; v < _node_count; ++v) {
-            cost[v] =  0;
-            prev[v] = -1;
+    PATH* shortestPath(int sourceNode, int destinationNode) {
+        if (!isValidNode(sourceNode))
+            return NULL;
+        if (!isValidNode(destinationNode))
+            return NULL;
+        PATH *path = (PATH*) malloc(sizeof(PATH)*_node_count);
+
+        for (int i = 0; i < _node_count; ++i) {
+            path[i].prev = -1;
+            path[i].cost = 0;
         }
-//        distance[sourceNode] = 0;
-//        while(!q.empty()){
-//
-//        }
-//        12          u ← vertex in Q with min dist[u]
-//        13
-//        14          remove u sourceNode Q
-//        15
-//        16          for each neighbor v of u still in Q:
-//        17              alt ← dist[u] + Graph.Edges(u, v)
-//        18              if alt < dist[v]:
-//        19                  dist[v] ← alt
-//        20                  prev[v] ← u
-//        21
-//        22      return dist[], prev[]
-        return NULL;
+        struct graphPQEdge {
+            int fromNode;
+            int toNode;
+        };
+        Queue<graphPQEdge> q;
+        auto sourceNodeEdge = _edges[sourceNode].front();
+        while (sourceNodeEdge != NULL) {
+            graphPQEdge tEdge{};
+            tEdge.fromNode = sourceNode;
+            tEdge.toNode = sourceNodeEdge->_data._destination;
+            q.priorityEnqueue(tEdge, sourceNodeEdge->_data._weight);
+            sourceNodeEdge = sourceNodeEdge->_next;
+        }
+
+        while (!q.isEmpty()) {
+            float cost = q.getFrontPriority();
+            auto e = q.dequeue();
+            int cNode = e.toNode;
+            int pNode = e.fromNode;
+
+            if (((path[cNode].prev == -1) || (path[cNode].cost> cost)) && cNode!=sourceNode) {
+                path[cNode].cost = cost;
+                path[cNode].prev = pNode;
+
+                auto cNodeEdges = _edges[cNode].front();
+                while (cNodeEdges != NULL) {
+                    graphPQEdge tEdge{};
+                    tEdge.fromNode = cNode;
+                    tEdge.toNode = cNodeEdges->_data._destination;
+                    q.priorityEnqueue(tEdge, cNodeEdges->_data._weight + cost);
+                    cNodeEdges = cNodeEdges->_next;
+                }
+            }
+
+        }
+
+        return path;
+    }
+
+    void showShortestPath(int sourceNode,int destinationNode){
+        auto path = shortestPath(sourceNode,destinationNode);
+
+        printf("\n Node | Prev  | Cost");
+        for (int i = 0; i < _node_count; ++i) {
+            if (i == sourceNode)
+                continue;
+            printf("\n %d | %d  | %f", i, path[i].prev,path[i].cost);
+
+        }
+        if (path[destinationNode].prev == -1)
+            printf("\n No route found!");
+        else {
+            printf("\n Shortest Path to %d from %d :\n", destinationNode, sourceNode);
+            for (int i = destinationNode; i != sourceNode;) {
+
+                printf("%d <- ", i);
+                i = path[i].prev;
+            }
+            printf("%d | Cost : %f",sourceNode, path[destinationNode].cost);
+        }
     }
 
 };
@@ -361,17 +406,34 @@ public:
 
 int main() {
 
-    Graph g1(10);
-    g1.setEdge(1, 2, 34);
-    g1.setEdge(1, 3, 3.1);
-    g1.setEdge(2, 1, 2.1);
-    g1.setEdge(3, 9, 2.1);
-    g1.setLabel(1, "Mumbai");
-    g1.setLabel(2, "Kolkata");
-    g1.setLabel(3, "Chennai");
+    Graph g1(5);
+    g1.setEdge(0, 1, 5);
+    g1.setEdge(1, 3, 5);
+    g1.setEdge(1, 2, 6);
+    g1.setEdge(2, 4, 1);
+    g1.setEdge(3, 4, 3);
+    g1.setEdge(2, 0, 12);
+
+
 //    g1.breadthFirstSearch(-1);
 //    g1.breadthFirstSearch(1);
-    g1.showOutEdges(1);
+//    g1.showOutEdges(1);
+    g1.showShortestPath(0,4);
+
+//    Queue<int> pq;
+//
+//    pq.priorityEnqueue(2,4);
+//    pq.priorityEnqueue(4, 12);
+//    pq.priorityEnqueue(6, 57);
+//    pq.priorityEnqueue(1,1);
+//    pq.priorityEnqueue(7,145);
+//    pq.priorityEnqueue(5,31);
+//    pq.priorityEnqueue(3,12);
+//
+//    for (int i = 0; i < 7; ++i) {
+//        std::cout << " " << pq.dequeue();
+//    }
+
 
     return 0;
 }
