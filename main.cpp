@@ -7,6 +7,7 @@ template<typename T>
 struct qNode {
     T _data{NULL};
     qNode *_next{NULL};
+    float _priority{0};
 };
 
 template<typename T>
@@ -41,6 +42,42 @@ public:
             _rear = temp;
         }
         return true;
+    }
+
+    bool priorityEnqueue(T data, float priority) {
+        auto temp = (qnodeptr) malloc(sizeof(qNode<T>));
+        if (!temp) {
+            return false;
+        }
+        temp->_data = data;
+        temp->_next = NULL;
+        temp->_priority = priority;
+
+        if (isEmpty()) {
+            _front = _rear = temp;
+        } else {
+
+            if (_front->_priority > priority) {
+                temp->_next = _front;
+                _front = temp;
+            } else {
+                auto tempnodeptr = _front;
+                while (tempnodeptr->_next != NULL &&
+                       tempnodeptr->_next->_priority < priority) {
+                    tempnodeptr = tempnodeptr->_next;
+                }
+
+                temp->_next = tempnodeptr->_next;
+                temp->_next = temp;
+            }
+
+        }
+        return true;
+    }
+    float getFrontPriority(){
+        if (isEmpty())
+            return 0;
+        return _front->_priority;
     }
 
     T dequeue() {
@@ -85,6 +122,14 @@ class Graph {
 public:
     Graph() : _node_count(0), _node_label(NULL), _edges(NULL) {}
 
+    ~Graph() {
+        for (int i = 0; i < _node_count; i++) {
+            free(_node_label[i]);
+        }
+        free(_node_label);
+        free(_edges);
+    }
+
     Graph(int n) {
         if (n < 1) {
             _node_count = 0;
@@ -97,7 +142,7 @@ public:
                 _edges = NULL;
             } else {
                 for (int i = 0; i < n; i++) {
-                    _node_label[i] = (char *) malloc(sizeof(char) * 19);
+                    _node_label[i] = (char *) malloc(sizeof(char) * 20);
                     char cur[20] = "No Label";
                     strcpy(_node_label[i], cur);
                 }
@@ -128,9 +173,7 @@ public:
     }
 
     bool hasTheEdge(int fromNode, int toNode) {
-        if (searchEdge(fromNode, toNode) == NULL)
-            return false;
-        return true;
+        return searchEdge(fromNode, toNode) != NULL;
     }
 
     bool isValidNode(int nodeNumber) {
@@ -228,7 +271,7 @@ public:
 
         printf("Out Edges from node %d: %s ---> ", nodeNumber, getLabel(nodeNumber));
         while (temp != NULL) {
-            printf("( %d: %s , Weight: %f ),", temp->_data._destination, getLabel(temp->_data._destination),
+            printf("\n( %d: %s , Weight: %f ),", temp->_data._destination, getLabel(temp->_data._destination),
                    temp->_data._weight);
             temp = temp->_next;
         }
@@ -244,14 +287,72 @@ public:
                 continue;
             auto temp = searchEdge(i, nodeNumber);
             if (temp != NULL)
-                printf("( %d: %s , Weight: %f ),", i, getLabel(i),
+                printf("\n( %d: %s , Weight: %f ),", i, getLabel(i),
                        temp->_data._weight);
         }
         return 1;
     }
 
-    int BFS(int start_pos = 0);
-    Queue<graphEdge> Shortest_Path(int from,int to);
+    int breadthFirstSearch(int startNode = 0) {
+        if (!isValidNode(startNode))
+            return 0;
+        printf("BFS traversal from node 1 ---> ", startNode, getLabel(startNode));
+        Queue<int> queue;
+        bool visited[_node_count];
+        for (int i = 0; i < _node_count; ++i) {
+            visited[i] = false;
+        }
+        visited[startNode] = true;
+        queue.enqueue(startNode);
+        while (!queue.isEmpty()) {
+            int v = queue.dequeue();
+            printf(" ( %d: %s ),", v, getLabel(v));
+            auto temp = _edges[v].front();
+            while (temp != NULL) {
+                if (!visited[temp->_data._destination]) {
+                    visited[temp->_data._destination] = true;
+                    queue.enqueue(temp->_data._destination);
+                }
+                temp = temp->_next;
+            }
+        }
+        return 1;
+    }
+
+    qNode<graphEdge> *shortestPath(int sourceNode, int destinationNode) {
+        if (!isValidNode(sourceNode))
+            return  NULL;
+        if (!isValidNode(destinationNode))
+            return  NULL;
+
+        float cost[_node_count];
+        int prev[_node_count];
+        struct graphPQEdge{
+            int from;
+            int to;
+        };
+        Queue<graphPQEdge> Q;
+        for (int v = 0; v < _node_count; ++v) {
+            cost[v] =  0;
+            prev[v] = -1;
+        }
+//        distance[sourceNode] = 0;
+//        while(!q.empty()){
+//
+//        }
+//        12          u ← vertex in Q with min dist[u]
+//        13
+//        14          remove u sourceNode Q
+//        15
+//        16          for each neighbor v of u still in Q:
+//        17              alt ← dist[u] + Graph.Edges(u, v)
+//        18              if alt < dist[v]:
+//        19                  dist[v] ← alt
+//        20                  prev[v] ← u
+//        21
+//        22      return dist[], prev[]
+        return NULL;
+    }
 
 };
 
@@ -264,10 +365,13 @@ int main() {
     g1.setEdge(1, 2, 34);
     g1.setEdge(1, 3, 3.1);
     g1.setEdge(2, 1, 2.1);
+    g1.setEdge(3, 9, 2.1);
     g1.setLabel(1, "Mumbai");
     g1.setLabel(2, "Kolkata");
     g1.setLabel(3, "Chennai");
-    g1.showInEdges(1);
+//    g1.breadthFirstSearch(-1);
+//    g1.breadthFirstSearch(1);
+    g1.showOutEdges(1);
 
     return 0;
 }
