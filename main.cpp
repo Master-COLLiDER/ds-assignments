@@ -43,6 +43,7 @@ public:
         }
         return true;
     }
+
     //lower the value the higher is the priority
     bool priorityEnqueue(T data, float priority) {
         qnodeptr temp = (qnodeptr) malloc(sizeof(qNode<T>));
@@ -68,7 +69,7 @@ public:
                 }
                 temp->_next = tempnodeptr->_next;
                 tempnodeptr->_next = temp;
-                while (_rear->_next!=NULL)
+                while (_rear->_next != NULL)
                     _rear = _rear->_next;
             }
 
@@ -129,7 +130,7 @@ class Graph {
 
 
     qNode<graphEdge> *searchEdge(int fromNode, int toNode) {
-        qNode<graphEdge>* temp = _edges[fromNode].front();
+        qNode<graphEdge> *temp = _edges[fromNode].front();
 
         while (temp != NULL) {
             if (temp->_data._destination == toNode)
@@ -177,7 +178,7 @@ public:
                 int i;
                 for (i = 0; i < n; i++) {
                     _node_label[i] = (char *) malloc(sizeof(char) * 20);
-                    strcpy(_node_label[i],  "No Label");
+                    strcpy(_node_label[i], "No Label");
                 }
                 _edges = (Queue<graphEdge> *) malloc(n * sizeof(Queue<graphEdge>));
                 if (_edges == NULL) {
@@ -265,6 +266,16 @@ public:
         return true;
     }
 
+    int labelToVertex(char *labelText) {
+        int i;
+        for (i = (_node_count - 1); i > -1; i--) {
+
+            if (strcmp(labelText, _node_label[i]) == 0)
+                return i;
+        }
+        return i;
+    }
+
     char *getLabel(int nodeNumber) {
         char *cur;
         if (!isValidNode(nodeNumber)) {
@@ -279,12 +290,11 @@ public:
     int showOutEdges(int nodeNumber) {
         if (!isValidNode(nodeNumber))
             return 0;
-        qNode<graphEdge>* temp = _edges[nodeNumber].front();
+        qNode<graphEdge> *temp = _edges[nodeNumber].front();
 
-        printf("Out Edges from node %d: %s ---> ", nodeNumber, getLabel(nodeNumber));
+        printf("Out Edges from node %s ---> ", getLabel(nodeNumber));
         while (temp != NULL) {
-            printf("\n( %d: %s , Weight: %f ),", temp->_data._destination, getLabel(temp->_data._destination),
-                   temp->_data._weight);
+            printf("\n(%s , Weight: %f ),", getLabel(temp->_data._destination), temp->_data._weight);
             temp = temp->_next;
         }
         return 1;
@@ -293,15 +303,15 @@ public:
     int showInEdges(int nodeNumber) {
         if (!isValidNode(nodeNumber))
             return 0;
-        qNode<graphEdge>* temp;
+        qNode<graphEdge> *temp;
         int i;
-        printf("In Edges to node %d: %s <--- ", nodeNumber, getLabel(nodeNumber));
+        printf("In Edges to node  %s <--- ", getLabel(nodeNumber));
         for (i = 0; i < _node_count; ++i) {
             if (i == nodeNumber)
                 continue;
             temp = searchEdge(i, nodeNumber);
             if (temp != NULL)
-                printf("\n( %d: %s , Weight: %f ),", i, getLabel(i),
+                printf("\n(%s , Weight: %f ),", getLabel(i),
                        temp->_data._weight);
         }
         return 1;
@@ -310,7 +320,7 @@ public:
     int BFS_Traversal(int startNode = 0) {
         if (!isValidNode(startNode))
             return 0;
-        printf("BFS traversal from node 1 ---> ", startNode, getLabel(startNode));
+        printf("BFS traversal FROM node %s ---> ", getLabel(startNode));
         Queue<int> queue;
         int i;
         bool visited[_node_count];
@@ -319,10 +329,10 @@ public:
         }
         visited[startNode] = true;
         queue.enqueue(startNode);
-        qNode<graphEdge>* temp;
+        qNode<graphEdge> *temp;
         while (!queue.isEmpty()) {
             int v = queue.dequeue();
-            printf(" ( %d: %s ),", v, getLabel(v));
+            printf("%s, ", getLabel(v));
             temp = _edges[v].front();
             while (temp != NULL) {
                 if (!visited[temp->_data._destination]) {
@@ -394,24 +404,25 @@ public:
         int i;
         PATH *path = ShortestPath(sourceNode, destinationNode);
 
-        printf("\n Failed to find any path!");
-        if (path != NULL) {
-            printf("\n Node | Prev  | Cost");
+        if (path == NULL)
+            printf("\n Failed to find any path!");
+        else {
+            printf("\n Vertex | Previous Vertex  | Cost to Reach");
             for (i = 0; i < _node_count; ++i) {
-                if (i == sourceNode)
-                    continue;
-                printf("\n %d | %d  | %f", i, path[i].prev, path[i].cost);
+                printf("\n %s | %s  | %f", getLabel(i), (path[i].prev == -1 ? "N/A" : getLabel(path[i].prev)),
+                       path[i].cost);
 
             }
             if (path[destinationNode].prev == -1)
-                printf("\n No route found! between %d and %d",sourceNode,destinationNode);
+                printf("\n No route found! between %S and %S", getLabel(sourceNode), getLabel(destinationNode));
             else {
-                printf("\n Shortest Path to %d from %d :\n", destinationNode, sourceNode);
+                printf("\n Shortest Path to vertex %s from vertex %s :\n", getLabel(destinationNode),
+                       getLabel(sourceNode));
                 for (i = destinationNode; i != sourceNode;) {
-                    printf("%d <- ", i);
+                    printf("%s <- ", getLabel(i));
                     i = path[i].prev;
                 }
-                printf("%d | Cost : %f", sourceNode, path[destinationNode].cost);
+                printf("%s | Total Cost : %f", getLabel(sourceNode), path[destinationNode].cost);
             }
             free(path);
         }
@@ -424,6 +435,93 @@ public:
 
 
 int main() {
+
+    char label[20], e1[20], e2[20];
+    char choice;
+    int n, i;
+    float wt;
+    std::cout << "\nEnter the number of vertex in the graph: ";
+    std::cin >> n;
+    Graph graph(n);
+
+    for (i = 0; i < n; i++) {
+        std::cout << "\nEnter Label for Vertex " << i + 1 << " : ";
+        std::cin >> label;
+        graph.setLabel(i, label);
+    }
+    while (true) {
+        std::cout << "\nRoll No. : CSM21002";
+        std::cout << "\n::: Graph MainMenu:::";
+        std::cout
+                << "\n1. Set Edge\n2. Shortest Path\n3. BFS Traversal\n4. Show Incoming Edges\n5. Show Outgoing Edges\nE. Exit\n\n Enter Your Choice: ";
+        std::cin >> choice;
+        switch (choice) {
+            case '1': {
+//                graph.setEdge(0,1,5);
+//                graph.setEdge(1,2,6);
+//                graph.setEdge(1,3,5);
+//                graph.setEdge(2,0,13);
+//                graph.setEdge(2,4,1);
+//                graph.setEdge(3,4,3);
+                std::cout << "\nEnter the label of source vertex for the edge: ";
+                std::cin >> e1;
+                std::cout << "\nEnter the label of destination vertex for the edge: ";
+                std::cin >> e2;
+                std::cout << "\nEnter the weight edge: ";
+                std::cin >> wt;
+                if (graph.setEdge(graph.labelToVertex(e1), graph.labelToVertex(e2), wt))
+                    printf("\nSuccessfully Set edge (%s, %s, %f ) ", e1, e2, wt);
+                else
+                    std::cout << "\nFailed to set edge ";
+                std::cin.get();
+                break;
+            }
+            case '2': {
+                std::cout << "\nEnter the label of source vertex: ";
+                std::cin >> e1;
+                std::cout << "\nEnter the label of destination vertex: ";
+                std::cin >> e2;
+                graph.showShortestPath(graph.labelToVertex(e1), graph.labelToVertex(e2));
+                std::cin.get();
+                break;
+            }
+            case '3': {
+                std::cout << "\nEnter the label of starting vertex for BFS traversal: ";
+                std::cin >> e1;
+                if (!graph.BFS_Traversal(graph.labelToVertex(e1)))
+                    std::cout << "\nTraversal failed! ";
+                std::cin.get();
+                break;
+            }
+            case '4': {
+                std::cout << "\nEnter the Vertex label: ";
+                std::cin >> e1;
+                printf("\nIn degree of %s : %d\n",e1,graph.inDegree(graph.labelToVertex(e1)));
+                graph.showInEdges(graph.labelToVertex(e1));
+                std::cin.get();
+                break;
+            }
+            case '5': {
+                std::cout << "\nEnter the Vertex label: ";
+                std::cin >> e1;
+                printf("\nOut degree of %s : %d\n",e1,graph.outDegree(graph.labelToVertex(e1)));
+                graph.showOutEdges(graph.labelToVertex(e1));
+                std::cin.get();
+                break;
+            }
+
+            case 'E':
+            case 'e':
+                return 0;
+
+            default: {
+                std::cout << "\nInvalid Choice!";
+                std::cin.get();
+                break;
+            }
+        }
+    }
+
 
     return 0;
 }
