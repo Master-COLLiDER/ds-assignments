@@ -88,7 +88,7 @@ public:
     T dequeue() {
         qnodeptr temp;
         T toReturn;
-        if (_front == NULL) {
+        if (isEmpty()) {
             exit(1);
         }
         temp = _front;
@@ -121,8 +121,8 @@ struct graphEdge {
 };
 
 struct PATH {
-    float cost{-1};
-    int prev{0};
+    float cost{};
+    int prev{};
 };
 
 class Graph {
@@ -191,8 +191,8 @@ public:
                 }
                 //_edges is allocaed with an array of Queue<graphEdge> of n size;
                 ///Note: using of malloc() does not call constructor Therefore queue is not initialized
-                ///i dont know why by my code only works on linux
-                ///On windows it exits when calling member funcitons of Queue class;
+                ///i dont know why but my code only works on linux
+                ///On windows it exits when calling member functions of Queue class;
                 _edges = (Queue<graphEdge> *) malloc(n * sizeof(Queue<graphEdge>));
                 if (_edges == NULL) {
                     _node_count = 0;
@@ -210,7 +210,7 @@ public:
     }
 
 
-    //this function is used to used to set edge
+    //This function is used to used to set edge
     //Return a boolean value
     //if invalid vertex is given then it return false
     //it return the status return by the Queue::enqueue() function
@@ -292,7 +292,6 @@ public:
     int labelToVertex(char *labelText) {
         int v;
         for (v = (_node_count - 1); v > -1; v--) {
-
             if (strcmp(labelText, _node_label[v]) == 0)
                 return v;
         }
@@ -338,7 +337,9 @@ public:
         }
         return 1;
     }
-
+    //The shortest path function is finds the shortest path between two vertex
+    //if given vertex are vaid,
+    //Allocates an array of PATH structure and retruns that after processing
     PATH *ShortestPath(int sourceNode, int destinationNode) {
         if (!isValidVertex(sourceNode))
             return NULL;
@@ -393,6 +394,8 @@ public:
         return path;
     }
 
+    //this function is used to find bfs traversal the outputqueue is used to enqueue the resulted vertex
+    //results 1 if success 0 invalid start vertex is given
     int BFS_Traversal(Queue<int> &outputQueue, int startNode = 0) {
         if (!isValidVertex(startNode))
             return 0;
@@ -473,7 +476,7 @@ public:
 
 int main() {
 
-    char label[20], e1[20], e2[20];
+    char text1[40], text2[40];
     char choice;
     int n, i;
     float wt;
@@ -483,8 +486,8 @@ int main() {
 
     for (i = 0; i < n; i++) {
         std::cout << "\nEnter Label for Vertex " << i + 1 << " : ";
-        std::cin >> label;
-        graph.setLabel(i, label);
+        std::cin >> text1;
+        graph.setLabel(i, text1);
     }
     while (true) {
         std::cout << "\nRoll No. : CSM21002";
@@ -494,20 +497,14 @@ int main() {
         std::cin >> choice;
         switch (choice) {
             case '1': {
-//                graph.setEdge(0,1,5);
-//                graph.setEdge(1,2,6);
-//                graph.setEdge(1,3,5);
-//                graph.setEdge(2,0,13);
-//                graph.setEdge(2,4,1);
-//                graph.setEdge(3,4,3);
                 std::cout << "\nEnter the label of source vertex for the edge: ";
-                std::cin >> e1;
+                std::cin >> text1;
                 std::cout << "\nEnter the label of destination vertex for the edge: ";
-                std::cin >> e2;
+                std::cin >> text2;
                 std::cout << "\nEnter the weight edge: ";
                 std::cin >> wt;
-                if (graph.setEdge(graph.labelToVertex(e1), graph.labelToVertex(e2), wt))
-                    printf("\nSuccessfully Set edge (%s, %s, %f ) ", e1, e2, wt);
+                if (graph.setEdge(graph.labelToVertex(text1), graph.labelToVertex(text2), wt))
+                    printf("\nSuccessfully Set edge (%s, %s, %f ) ", text1, text2, wt);
                 else
                     std::cout << "\nFailed to set edge ";
                 std::cin.get();
@@ -515,34 +512,34 @@ int main() {
             }
             case '2': {
                 std::cout << "\nEnter the label of source vertex: ";
-                std::cin >> e1;
+                std::cin >> text1;
                 std::cout << "\nEnter the label of destination vertex: ";
-                std::cin >> e2;
-                graph.showShortestPath(graph.labelToVertex(e1), graph.labelToVertex(e2));
+                std::cin >> text2;
+                graph.showShortestPath(graph.labelToVertex(text1), graph.labelToVertex(text2));
                 std::cin.get();
                 break;
             }
             case '3': {
                 std::cout << "\nEnter the label of starting vertex for BFS traversal: ";
-                std::cin >> e1;
-                if (!graph.show_BFS_Traversal(graph.labelToVertex(e1)))
+                std::cin >> text1;
+                if (!graph.show_BFS_Traversal(graph.labelToVertex(text1)))
                     std::cout << "\nTraversal failed! ";
                 std::cin.get();
                 break;
             }
             case '4': {
                 std::cout << "\nEnter the Vertex label: ";
-                std::cin >> e1;
-                printf("\nIn degree of %s : %d\n", e1, graph.inDegree(graph.labelToVertex(e1)));
-                graph.showInEdges(graph.labelToVertex(e1));
+                std::cin >> text1;
+                printf("\nIn degree of %s : %d\n", text1, graph.inDegree(graph.labelToVertex(text1)));
+                graph.showInEdges(graph.labelToVertex(text1));
                 std::cin.get();
                 break;
             }
             case '5': {
                 std::cout << "\nEnter the Vertex label: ";
-                std::cin >> e1;
-                printf("\nOut degree of %s : %d\n", e1, graph.outDegree(graph.labelToVertex(e1)));
-                graph.showOutEdges(graph.labelToVertex(e1));
+                std::cin >> text1;
+                printf("\nOut degree of %s : %d\n", text1, graph.outDegree(graph.labelToVertex(text1)));
+                graph.showOutEdges(graph.labelToVertex(text1));
                 std::cin.get();
                 break;
             }

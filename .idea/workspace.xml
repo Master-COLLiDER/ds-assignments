@@ -14,9 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7687129a-5ca8-4de8-9e82-634d983d583b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/heaptest.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -176,9 +174,16 @@
       <option name="presentableId" value="Default" />
       <updated>1644180488525</updated>
       <workItem from="1644180489985" duration="127000" />
-      <workItem from="1644206638162" duration="4424000" />
+      <workItem from="1644206638162" duration="6033000" />
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="GAHOGHA">
+      <created>1644224054023</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1644224054023</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +195,7 @@
     <MESSAGE value="oaighaiogh" />
     <MESSAGE value="oahgoah" />
     <MESSAGE value="goahhg" />
-    <option name="LAST_COMMIT_MESSAGE" value="goahhg" />
+    <MESSAGE value="GAHOGHA" />
+    <option name="LAST_COMMIT_MESSAGE" value="GAHOGHA" />
   </component>
 </project>
