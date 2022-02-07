@@ -431,7 +431,7 @@ public:
         if (path == NULL)
             printf("\n Failed to find any path!");
         else {
-            printf("\n Vertex | Previous Vertex  | Cost to Reach");
+            printf("\nCalculated Table:\n Vertex | Previous Vertex  | Cost to Reach");
             for (i = 0; i < _node_count; ++i) {
                 printf("\n %s | %s  | %f", getLabel(i), (path[i].prev == -1 ? "N/A" : getLabel(path[i].prev)),
                        path[i].cost);
@@ -443,10 +443,10 @@ public:
                 printf("\n Shortest Path to vertex %s from vertex %s :\n", getLabel(destinationNode),
                        getLabel(sourceNode));
                 for (i = destinationNode; i != sourceNode;) {
-                    printf("%s <- ", getLabel(i));
+                    printf("( %s ) , ", getLabel(i));
                     i = path[i].prev;
                 }
-                printf("%s | Total Cost : %f", getLabel(sourceNode), path[destinationNode].cost);
+                printf("( %s ) | Total Cost : %f", getLabel(sourceNode), path[destinationNode].cost);
             }
             free(path);
         }

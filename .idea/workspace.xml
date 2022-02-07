@@ -174,7 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1644180488525</updated>
       <workItem from="1644180489985" duration="127000" />
-      <workItem from="1644206638162" duration="6033000" />
+      <workItem from="1644206638162" duration="6660000" />
     </task>
     <task id="LOCAL-00007" summary="GAHOGHA">
       <created>1644224054023</created>
@@ -183,7 +183,21 @@
       <option name="project" value="LOCAL" />
       <updated>1644224054023</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="final">
+      <created>1644225737660</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1644225737660</updated>
+    </task>
+    <task id="LOCAL-00009" summary="ogahoag">
+      <created>1644225774176</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1644225774176</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +210,8 @@
     <MESSAGE value="oahgoah" />
     <MESSAGE value="goahhg" />
     <MESSAGE value="GAHOGHA" />
-    <option name="LAST_COMMIT_MESSAGE" value="GAHOGHA" />
+    <MESSAGE value="final" />
+    <MESSAGE value="ogahoag" />
+    <option name="LAST_COMMIT_MESSAGE" value="ogahoag" />
   </component>
 </project>
