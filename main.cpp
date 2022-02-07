@@ -337,6 +337,7 @@ public:
         }
         return 1;
     }
+
     //The shortest path function is finds the shortest path between two vertex
     //if given vertex are vaid,
     //Allocates an array of PATH structure and retruns that after processing
@@ -443,10 +444,10 @@ public:
                 printf("\n Shortest Path to vertex %s from vertex %s :\n", getLabel(destinationNode),
                        getLabel(sourceNode));
                 for (i = destinationNode; i != sourceNode;) {
-                    printf("( %s ) , ", getLabel(i));
+                    printf("(%s) , ", getLabel(i));
                     i = path[i].prev;
                 }
-                printf("( %s ) | Total Cost : %f", getLabel(sourceNode), path[destinationNode].cost);
+                printf("(%s) | Total Cost : %f", getLabel(sourceNode), path[destinationNode].cost);
             }
             free(path);
         }
@@ -463,7 +464,7 @@ public:
         Queue<int> queue;
         if (BFS_Traversal(queue, startNode = startNode))
             while (!queue.isEmpty()) {
-                printf("%s, ", getLabel(queue.dequeue()));
+                printf("(%s), ", getLabel(queue.dequeue()));
             }
         return 1;
     }
@@ -507,7 +508,7 @@ int main() {
                     printf("\nSuccessfully Set edge (%s, %s, %f ) ", text1, text2, wt);
                 else
                     std::cout << "\nFailed to set edge ";
-                std::cin.get();
+
                 break;
             }
             case '2': {
@@ -516,7 +517,7 @@ int main() {
                 std::cout << "\nEnter the label of destination vertex: ";
                 std::cin >> text2;
                 graph.showShortestPath(graph.labelToVertex(text1), graph.labelToVertex(text2));
-                std::cin.get();
+
                 break;
             }
             case '3': {
@@ -524,23 +525,26 @@ int main() {
                 std::cin >> text1;
                 if (!graph.show_BFS_Traversal(graph.labelToVertex(text1)))
                     std::cout << "\nTraversal failed! ";
-                std::cin.get();
+
                 break;
             }
             case '4': {
                 std::cout << "\nEnter the Vertex label: ";
                 std::cin >> text1;
-                printf("\nIn degree of %s : %d\n", text1, graph.inDegree(graph.labelToVertex(text1)));
-                graph.showInEdges(graph.labelToVertex(text1));
-                std::cin.get();
+                if (graph.showInEdges(graph.labelToVertex(text1)))
+                    printf("\nIn degree of %s : %d\n", text1, graph.inDegree(graph.labelToVertex(text1)));
+                else
+                    std::cout << "\nInvalid Vertex";
                 break;
             }
             case '5': {
                 std::cout << "\nEnter the Vertex label: ";
                 std::cin >> text1;
-                printf("\nOut degree of %s : %d\n", text1, graph.outDegree(graph.labelToVertex(text1)));
-                graph.showOutEdges(graph.labelToVertex(text1));
-                std::cin.get();
+                if (graph.showOutEdges(graph.labelToVertex(text1)))
+                    printf("\nOut degree of %s : %d\n", text1, graph.outDegree(graph.labelToVertex(text1)));
+                else
+                    std::cout << "\nInvalid Vertex";
+
                 break;
             }
 
@@ -550,7 +554,7 @@ int main() {
 
             default: {
                 std::cout << "\nInvalid Choice!";
-                std::cin.get();
+
                 break;
             }
         }
