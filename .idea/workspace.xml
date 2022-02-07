@@ -15,7 +15,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7687129a-5ca8-4de8-9e82-634d983d583b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +60,6 @@
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="assignments" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="assignments" TARGET_NAME="assignments" CONFIG_NAME="Debug-WSL" RUN_TARGET_PROJECT_NAME="assignments" RUN_TARGET_NAME="assignments">
@@ -174,7 +168,8 @@
       <option name="presentableId" value="Default" />
       <updated>1644180488525</updated>
       <workItem from="1644180489985" duration="127000" />
-      <workItem from="1644206638162" duration="7312000" />
+      <workItem from="1644206638162" duration="8385000" />
+      <workItem from="1644230291295" duration="1000" />
     </task>
     <task id="LOCAL-00007" summary="GAHOGHA">
       <created>1644224054023</created>
@@ -204,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644226294834</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="aoghagoi">
+      <created>1644227050259</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1644227050259</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +222,7 @@
     <MESSAGE value="final" />
     <MESSAGE value="ogahoag" />
     <MESSAGE value="agoihagoh" />
-    <option name="LAST_COMMIT_MESSAGE" value="agoihagoh" />
+    <MESSAGE value="aoghagoi" />
+    <option name="LAST_COMMIT_MESSAGE" value="aoghagoi" />
   </component>
 </project>
