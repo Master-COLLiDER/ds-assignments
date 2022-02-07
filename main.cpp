@@ -1,5 +1,7 @@
+/** Roll No. CSM21002 **/
+
 #include <iostream>
-#include <cstring>
+#include <string.h>
 
 #ifndef CSM21002_QUEUE_H
 #define CSM21002_QUEUE_H
@@ -124,7 +126,7 @@ struct PATH {
 };
 
 class Graph {
-    unsigned _node_count;
+    int _node_count;
     char **_node_label;
     Queue<graphEdge> *_edges;
 
@@ -140,12 +142,13 @@ class Graph {
         return NULL;
     }
 
+    //Used to check if the edge exits
     bool hasTheEdge(int fromNode, int toNode) {
         return searchEdge(fromNode, toNode) != NULL;
     }
 
 
-    bool isValidNode(int nodeNumber) {
+    bool isValidVertex(int nodeNumber) {
         if ((nodeNumber < 0) || (nodeNumber >= _node_count))
             return false;
         return true;
@@ -155,6 +158,8 @@ class Graph {
 public:
     Graph() : _node_count(0), _node_label(NULL), _edges(NULL) {}
 
+    //destructor of graph class
+    //
     ~Graph() {
         int i;
         for (i = 0; i < _node_count; i++) {
@@ -164,25 +169,34 @@ public:
         free(_edges);
     }
 
+    //graph constructor funciton
     Graph(int n) {
         if (n < 1) {
             _node_count = 0;
             _node_label = NULL;
             _edges = NULL;
         } else {
+            //pointer to char pointer is allocated with n number of char*
             _node_label = (char **) malloc(sizeof(char *) * n);
             if (_node_label == NULL) {
                 _node_count = 0;
                 _edges = NULL;
             } else {
                 int i;
+
+                //for each char * in _node_labels char** a char array of size 20 is allocated;
                 for (i = 0; i < n; i++) {
                     _node_label[i] = (char *) malloc(sizeof(char) * 20);
                     strcpy(_node_label[i], "No Label");
                 }
+                //_edges is allocaed with an array of Queue<graphEdge> of n size;
+                ///Note: using of malloc() does not call constructor Therefore queue is not initialized
+                ///i dont know why by my code only works on linux
+                ///On windows it exits when calling member funcitons of Queue class;
                 _edges = (Queue<graphEdge> *) malloc(n * sizeof(Queue<graphEdge>));
                 if (_edges == NULL) {
                     _node_count = 0;
+                    //if graphEdge queue allocation is failed, each char * in label is deallocated
                     for (i = 0; i < n; i++) {
                         free(_node_label[i]);
                     }
@@ -196,10 +210,14 @@ public:
     }
 
 
+    //this function is used to used to set edge
+    //Return a boolean value
+    //if invalid vertex is given then it return false
+    //it return the status return by the Queue::enqueue() function
     bool setEdge(int fromNode, int toNode, float weight) {
-        if (!isValidNode(fromNode))
+        if (!isValidVertex(fromNode))
             return false;
-        if (!isValidNode(toNode))
+        if (!isValidVertex(toNode))
             return false;
         if (fromNode == toNode) //Simple graph
             return false;
@@ -215,10 +233,12 @@ public:
         return _edges[fromNode].enqueue(data);
     }
 
+    //This function returns the weight for a given edge if edge is available in queue of _edges[source vertex]
+    //Returns 0 if edge is not found
     float getWeight(int fromNode, int toNode) {
-        if (!isValidNode(fromNode))
+        if (!isValidVertex(fromNode))
             return 0;
-        if (!isValidNode(toNode))
+        if (!isValidVertex(toNode))
             return 0;
         if (fromNode == toNode) //Simple graph
             return 0;
@@ -231,10 +251,10 @@ public:
         return 0;
     }
 
-
+    //returns the outgoing edges for a given vertex
     int outDegree(int nodeNumber) {
         int degree = 0;
-        if (!isValidNode(nodeNumber))
+        if (!isValidVertex(nodeNumber))
             return degree;
         qNode<graphEdge> *temp = _edges[nodeNumber].front();
         while (temp != NULL) {
@@ -244,9 +264,10 @@ public:
         return degree;
     }
 
+    // Return the number of incoming edges for the given vertex
     int inDegree(int nodeNumber) {
         int degree = 0, i;
-        if (!isValidNode(nodeNumber))
+        if (!isValidVertex(nodeNumber))
             return degree;
         for (i = 0; i < _node_count; ++i) {
             if (i == nodeNumber)
@@ -257,8 +278,9 @@ public:
         return degree;
     }
 
+    // sets label in _node_label char array;
     bool setLabel(int nodeNumber, char *labelText) {
-        if (!isValidNode(nodeNumber))
+        if (!isValidVertex(nodeNumber))
             return false; // invalid _destination
         if (strlen(labelText) > 19)
             labelText[19] = '\0'; //Labels are maximum 19 symbol long
@@ -266,29 +288,28 @@ public:
         return true;
     }
 
+    //Mapping function to convert label to vertex
     int labelToVertex(char *labelText) {
-        int i;
-        for (i = (_node_count - 1); i > -1; i--) {
+        int v;
+        for (v = (_node_count - 1); v > -1; v--) {
 
-            if (strcmp(labelText, _node_label[i]) == 0)
-                return i;
+            if (strcmp(labelText, _node_label[v]) == 0)
+                return v;
         }
-        return i;
+        return v; // return -1 if no matching vertex is found of given label
     }
 
-    char *getLabel(int nodeNumber) {
-        char *cur;
-        if (!isValidNode(nodeNumber)) {
+    const char *getLabel(int nodeNumber) {
+
+        if (!isValidVertex(nodeNumber)) {
             return NULL; // invalid _destination
-        } else {
-            cur = strdup(_node_label[nodeNumber]);
         }
-        return cur;
+        return _node_label[nodeNumber];
     }
 
-
+    //Displays outgoing edges for a given vertex
     int showOutEdges(int nodeNumber) {
-        if (!isValidNode(nodeNumber))
+        if (!isValidVertex(nodeNumber))
             return 0;
         qNode<graphEdge> *temp = _edges[nodeNumber].front();
 
@@ -300,8 +321,9 @@ public:
         return 1;
     }
 
+    //Displays Incoming edges for a vertex
     int showInEdges(int nodeNumber) {
-        if (!isValidNode(nodeNumber))
+        if (!isValidVertex(nodeNumber))
             return 0;
         qNode<graphEdge> *temp;
         int i;
@@ -317,39 +339,10 @@ public:
         return 1;
     }
 
-    int BFS_Traversal(int startNode = 0) {
-        if (!isValidNode(startNode))
-            return 0;
-        printf("BFS traversal FROM node %s ---> ", getLabel(startNode));
-        Queue<int> queue;
-        int i;
-        bool visited[_node_count];
-        for (i = 0; i < _node_count; ++i) {
-            visited[i] = false;
-        }
-        visited[startNode] = true;
-        queue.enqueue(startNode);
-        qNode<graphEdge> *temp;
-        while (!queue.isEmpty()) {
-            int v = queue.dequeue();
-            printf("%s, ", getLabel(v));
-            temp = _edges[v].front();
-            while (temp != NULL) {
-                if (!visited[temp->_data._destination]) {
-                    visited[temp->_data._destination] = true;
-                    queue.enqueue(temp->_data._destination);
-                }
-                temp = temp->_next;
-            }
-        }
-        return 1;
-    }
-
-
     PATH *ShortestPath(int sourceNode, int destinationNode) {
-        if (!isValidNode(sourceNode))
+        if (!isValidVertex(sourceNode))
             return NULL;
-        if (!isValidNode(destinationNode))
+        if (!isValidVertex(destinationNode))
             return NULL;
         PATH *path = (PATH *) malloc(sizeof(PATH) * _node_count);
         if (path == NULL)
@@ -400,6 +393,34 @@ public:
         return path;
     }
 
+    int BFS_Traversal(Queue<int> &outputQueue, int startNode = 0) {
+        if (!isValidVertex(startNode))
+            return 0;
+        Queue<int> queue;
+        int i, v;
+        bool visited[_node_count];
+        for (i = 0; i < _node_count; ++i) {
+            visited[i] = false;
+        }
+        visited[startNode] = true;
+        queue.enqueue(startNode);
+        qNode<graphEdge> *temp;
+        while (!queue.isEmpty()) {
+            v = queue.dequeue();
+            outputQueue.enqueue(v);
+            temp = _edges[v].front();
+            while (temp != NULL) {
+                if (!visited[temp->_data._destination]) {
+                    visited[temp->_data._destination] = true;
+                    queue.enqueue(temp->_data._destination);
+                }
+                temp = temp->_next;
+            }
+        }
+        return 1;
+    }
+
+    //displays shortest between two nodes after calling ShortestPath function
     void showShortestPath(int sourceNode, int destinationNode) {
         int i;
         PATH *path = ShortestPath(sourceNode, destinationNode);
@@ -414,7 +435,7 @@ public:
 
             }
             if (path[destinationNode].prev == -1)
-                printf("\n No route found! between %S and %S", getLabel(sourceNode), getLabel(destinationNode));
+                printf("\n No route found! between %s and %s", getLabel(sourceNode), getLabel(destinationNode));
             else {
                 printf("\n Shortest Path to vertex %s from vertex %s :\n", getLabel(destinationNode),
                        getLabel(sourceNode));
@@ -428,6 +449,22 @@ public:
         }
 
     }
+
+    //Displays BFS traversal results after calling the bfs traversal fucniton
+    int show_BFS_Traversal(int startNode = 0) {
+        if (!isValidVertex(startNode)) {
+            std::cout << "\nInvalid Vertex";
+            return 0;
+        }
+        printf("BFS traversal FROM node %s ---> ", getLabel(startNode));
+        Queue<int> queue;
+        if (BFS_Traversal(queue, startNode = startNode))
+            while (!queue.isEmpty()) {
+                printf("%s, ", getLabel(queue.dequeue()));
+            }
+        return 1;
+    }
+
 
 };
 
@@ -488,7 +525,7 @@ int main() {
             case '3': {
                 std::cout << "\nEnter the label of starting vertex for BFS traversal: ";
                 std::cin >> e1;
-                if (!graph.BFS_Traversal(graph.labelToVertex(e1)))
+                if (!graph.show_BFS_Traversal(graph.labelToVertex(e1)))
                     std::cout << "\nTraversal failed! ";
                 std::cin.get();
                 break;
@@ -496,7 +533,7 @@ int main() {
             case '4': {
                 std::cout << "\nEnter the Vertex label: ";
                 std::cin >> e1;
-                printf("\nIn degree of %s : %d\n",e1,graph.inDegree(graph.labelToVertex(e1)));
+                printf("\nIn degree of %s : %d\n", e1, graph.inDegree(graph.labelToVertex(e1)));
                 graph.showInEdges(graph.labelToVertex(e1));
                 std::cin.get();
                 break;
@@ -504,7 +541,7 @@ int main() {
             case '5': {
                 std::cout << "\nEnter the Vertex label: ";
                 std::cin >> e1;
-                printf("\nOut degree of %s : %d\n",e1,graph.outDegree(graph.labelToVertex(e1)));
+                printf("\nOut degree of %s : %d\n", e1, graph.outDegree(graph.labelToVertex(e1)));
                 graph.showOutEdges(graph.labelToVertex(e1));
                 std::cin.get();
                 break;
