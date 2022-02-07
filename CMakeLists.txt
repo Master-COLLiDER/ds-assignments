@@ -4,3 +4,4 @@ project(assignments)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(assignments main.cpp Collection.cpp Collection.h OrderedPair.cpp OrderedPair.h Stack.cpp Stack.h )
+add_executable(bubblesort BubbleSort.cpp)

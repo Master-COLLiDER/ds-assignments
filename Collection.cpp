@@ -116,40 +116,34 @@ int Collection::indexOf(float which) {
 }
 
 
+void swap(float &x, float &y) {
+    float temp;
+    temp = x;
+    y = x;
+    x = temp;
+}
+
 void Collection::bubbleSort() {
-    int St_Comp=0,St_Asn_1=0,St_Asn_2=0,St_Asn_3=0;
+
     int i, j;
     float temp;
-    for (i = count - 1; i > 0; i--) {
-        for (j = 0; j < i; j++) {
-
-    St_Comp:  if (data[j] > data[j + 1]) {             St_Comp++;
-            St_Asn_1:   temp = data[j];             St_Asn_1++;
-            St_Asn_2:   data[j] = data[j + 1];      St_Asn_2++;
-            St_Asn_3:   data[j + 1] = temp;         St_Asn_3++;
-        }
-        }
-    }
-    std::cout << "Data sorted!\n";
-    St_perf:
-    std::cout << "St_Comp :" << St_Comp << " times.\n";
-    std::cout << "St_Asn_1 :" << St_Asn_1 << " times.\n";
-    std::cout << "St_Asn_2 :" << St_Asn_2 << " times.\n";
-    std::cout << "St_Asn_3 :" << St_Asn_3 << " times.\n";
+    for (i = count - 1; i > 0; i--)
+        for (j = 0; j < i; j++)
+            if (data[j] > data[j + 1])
+                swap(data[j], data[j + 1]);
 
 }
 
 
-
 void Collection::displayData() {
 
-    if(count){
-        std::cout<<"Data : ";
+    if (count) {
+        std::cout << "Data : ";
         for (int i = 0; i < count; i++) {
             std::cout << data[i] << (((i + 1) != count) ? ", " : "");
         }
-    } else{
-        std::cout<<"Empty!";
+    } else {
+        std::cout << "Empty!";
     }
 
 }
@@ -159,66 +153,60 @@ int Collection::getMax() const {
 }
 
 void Collection::insertionSort() {
-    int i,j;
+    int i, j;
     CURRENT_TYPE value;
     for (i = 1; i < count; i++) {
         value = data[i];
-        for (j = i; j>=0 && data[j-1] > value ; j--) {
-            data[j] = data[j-1];
+        for (j = i; j >= 0 && data[j - 1] > value; j--) {
+            data[j] = data[j - 1];
         }
-        if (j!=i)
-            data[j]=value;
+        if (j != i)
+            data[j] = value;
     }
 }
 
 void Collection::quickSort() {
     Stack<OrderedPair> whereto;
-    OrderedPair cur_op = OrderedPair(0,count-1); //cur_op is an ordered pair
-    int start,end,position,left,right;
+    OrderedPair cur_op = OrderedPair(0, count - 1); //cur_op is an ordered pair
+    int start, end, position, left, right;
     float Pivot;
     whereto.push(cur_op);
-    while(!whereto.isEmpty())
-    {
-        cur_op=whereto.pop();
+    while (!whereto.isEmpty()) {
+        cur_op = whereto.pop();
         start = cur_op.getX();
         end = cur_op.getY();
-        Pivot= data[start];
-        position=start;
-        left=start+1;
-        right=end;
-        while(left<right)
-        {
-            for( ;right>left; right--) // Ensure that element towards right of Pivot are bigger
+        Pivot = data[start];
+        position = start;
+        left = start + 1;
+        right = end;
+        while (left < right) {
+            for (; right > left; right--) // Ensure that element towards right of Pivot are bigger
             {
-                if(data[right]<Pivot)
-                {
-                    data[position]=data[right];
-                    data[right]=Pivot;
-                    position=right;
+                if (data[right] < Pivot) {
+                    data[position] = data[right];
+                    data[right] = Pivot;
+                    position = right;
                     right--;
                     break;
                 }
             }
-            for(  ; left < right; left++)   // Ensure that element towards left of Pivot are smaller
+            for (; left < right; left++)   // Ensure that element towards left of Pivot are smaller
             {
-                if(data[left]>=Pivot)
-                {
-                    data[position]=data[left];
-                    data[left]=Pivot;
-                    position=left;
+                if (data[left] >= Pivot) {
+                    data[position] = data[left];
+                    data[left] = Pivot;
+                    position = left;
                     left++;
                     break;
                 }
             }
         } // End of main loop for Positioning the Pivot element
-        if((position+1)<end)
-        {
-            cur_op=OrderedPair(position+1, end);
+        if ((position + 1) < end) {
+            cur_op = OrderedPair(position + 1, end);
             whereto.push(cur_op);
         }
-        if(start<(position-1))
-        {
-            cur_op=OrderedPair(start, position-1);
+        if (start < (position - 1)) {
+            cur_op = OrderedPair(start, position - 1);
             whereto.push(cur_op);
         }
 
@@ -227,16 +215,16 @@ void Collection::quickSort() {
 }
 
 void Collection::selectionSort() {
-    int i,j,current_minimum;
+    int i, j, current_minimum;
     CURRENT_TYPE temp;
-    for(i=0;i<count-1;i++){
+    for (i = 0; i < count - 1; i++) {
         current_minimum = i;
-        for (j = i+1; j < count; j++) {
-            if (data[current_minimum]>data[j]){
-                current_minimum=j;
+        for (j = i + 1; j < count; j++) {
+            if (data[current_minimum] > data[j]) {
+                current_minimum = j;
             }
         }
-        if(current_minimum!=i){
+        if (current_minimum != i) {
             temp = data[i];
             data[i] = data[current_minimum];
             data[current_minimum] = temp;
